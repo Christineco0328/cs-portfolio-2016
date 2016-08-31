@@ -1,0 +1,27 @@
+#navbar {
+        Background-color: lightskyblue;
+        text-align:center;
+}
+
+#navbar li {
+        display: inline-block;
+        padding: 15px;
+        font-size: 20px;
+        border: 2px solid gray;
+        border-radius: 50%;
+        background-color: white;
+        font-family: "Georgia", Georgia, Serif;
+        font-weight: bold;
+       
+}
+#pictures li {
+    display: inline-block;
+    padding:15ps
+    border: 5px solid gray;
+}
+#aboutmepage {
+           text-align:center;
+}
+     table,td {
+             text-align: center;
+     }
