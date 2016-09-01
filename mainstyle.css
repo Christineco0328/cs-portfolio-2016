@@ -1,5 +1,5 @@
 #navbar {
-        Background-color: lightskyblue;
+        Background-color: solid gray;
         text-align:center;
 }
 
@@ -16,12 +16,20 @@
 }
 #pictures li {
     display: inline-block;
-    padding:15ps
+    padding:15px;
+    border: 5px solid gray;
+    border-radius: 100%;
+}
+#friends li {
+    display: inline-block;
+    padding:10px;
     border: 5px solid gray;
 }
+
 #aboutmepage {
            text-align:center;
 }
      table,td {
              text-align: center;
+             
      }
