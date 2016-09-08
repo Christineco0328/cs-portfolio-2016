@@ -4,8 +4,9 @@
         <title> </title>
           <link rel="stylesheet" href="mainstyle.css" type="text/css" />
     <style>
-        Body {
-            background: "websitebackground.JPG";
+        html {
+            background: url("http://bgfons.com/upload/light_texture2245.jpg") no-repeat center center fixed;
+            background-size:cover;
         }
         
         h1 {
@@ -14,13 +15,7 @@
             text-align: center;
         }
         
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        h7,
-        h8 {
+        h2 {
             font-family: "Georgia", Georgia, Serif;
             font-weight: bold;
             border: 8px dotted Khaki;
@@ -29,12 +24,17 @@
             font-size: 25px;
         }
         
+        h3 {
+            font-family:"Georgia", Georgia, Serif;
+            font-weight: bold;
+            
+        }
+        
         p {
-            background: white;
-            border: 0px;
             font-family: "Georgia", Georgia, Serif;
             font-size: 18px;
-            line-height: 200%;
+            text-align: left;
+            line-height: 150%;
         }
         
         table,
@@ -45,17 +45,29 @@
             width: 70%;
             font-size: 140%;
             
-        
-            
         }    
             
-           
-        }
         
         img {
             background: white;
-            border: 5px solid gray;
-            border-radius: 100%;
+            border: 2px solid gray;
+            margin-left: 10px;
+            
+            
+        }
+        
+        div {
+            background: white;
+            font-size: 20px;
+            Width: 40%;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 10px;
+            display: inline-block;
+          
+          
             
         }
         
@@ -75,20 +87,18 @@
         
       .center {
           margin: auto;
+          border: 15px double gray;
       }
-       
+      .doubleborder {
+          border: 5px double gray;
+      }
         
         
     </style>
 
-
-
-
-
     </head>
     
-<body style="background-image:url(http://bgfons.com/upload/light_texture2245.jpg)">
-    <!-- Navbar Starts Here -->
+<body >
     <ul id="navbar">
         <li> <a href="index.html"> About Me </a></li>
         <li> <a href="hardware.html"> Hardware </a></li>
@@ -102,8 +112,32 @@
 
     <!-- Navbar Ends Here -->
     
-    <h1> How to Code </h1>
+    <h1> How to Code a Webpage</h1>
+<p  style="text-align:center"> Here I will be using my own hardware page to show you how to code and create a webpage! </p>
+<h2> Headers </h2>
+<div class="double">
+     <h3>Step 1: HTML for your Headers </h3> 
+    <p> Headers are a big part of organization. They will allow you to tell your viewer what each new section is about. Through html, headers will naturally stand out more compared to regular text.</p>
+    <br>
+    <p> <b> Header Tag</b></p>
+    <p> When you type into your html file you will start your header with:</p> 
+    <p style="text-align: center; color: red"> <b>&lt;h1&gt; &lt;/h1&gt; </b></p>
+      <p style="text-align:right">Your code should look like this. </p>
+        <img src="images/Headerscreenshot.png" style="height:70px; float:right;" />
+  <p>Header 1 will show up as the biggest and most domaniant header. Further along, when you want to head the individual sections of your webpage, you can number your header as 2 and up. Lower-numbered headers will be be smaller and will not stand out as much. For my Hardware page specifcally, I only used "h2" to head the different categories so that I could keep the size and styling of the headers consistent.</p> 
+  
+</div>
+<div class="double">
+    <h3> Step 2: CSS for your Headers</h3>
+    <p> CSS for your Headers will allow you to decorate your headers with borders, color, and fonts, while also allowing you to position where they go.</p>
+    
+</div>
+<h2> Tables </h2>    
 
-
+<div class="double">
+    <h3> Step 3: HTML for your Tables</h3>
+    
+    
+</div>
 
     </body>
