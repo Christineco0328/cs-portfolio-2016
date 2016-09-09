@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> </title>
-          <link rel="stylesheet" href="mainstyle.css" type="text/css" />
+
+<head>
+    <title> </title>
+    <link rel="stylesheet" href="mainstyle.css" type="text/css" />
     <style>
         html {
             background: url("http://bgfons.com/upload/light_texture2245.jpg") no-repeat center center fixed;
-            background-size:cover;
+            background-size: cover;
         }
         
         h1 {
@@ -25,9 +26,8 @@
         }
         
         h3 {
-            font-family:"Georgia", Georgia, Serif;
+            font-family: "Georgia", Georgia, Serif;
             font-weight: bold;
-            
         }
         
         p {
@@ -44,16 +44,13 @@
             padding: 10px;
             width: 70%;
             font-size: 140%;
-            
-        }    
-            
+        }
         
         img {
             background: white;
             border: 2px solid gray;
             margin-left: 10px;
-            
-            
+            margin-right: 10px;
         }
         
         div {
@@ -65,10 +62,7 @@
             margin-left: 20px;
             margin-right: 20px;
             margin-top: 10px;
-            display: inline-block;
-          
-          
-            
+            display:inline-block;
         }
         
         .double {
@@ -76,29 +70,27 @@
             border: 15px double gray;
         }
         
-       .float {
-           float: left;
-       }
-       
-       .right {
-          float: right;  
-          
+        .float {
+            float: left;
         }
         
-      .center {
-          margin: auto;
-          border: 15px double gray;
-      }
-      .doubleborder {
-          border: 5px double gray;
-      }
+        .right {
+            float: right;
+        }
         
+        .center {
+            margin: auto;
+            border: 15px double gray;
+        }
         
+        .doubleborder {
+            border: 5px double gray;
+        }
     </style>
 
-    </head>
-    
-<body >
+</head>
+
+<body>
     <ul id="navbar">
         <li> <a href="index.html"> About Me </a></li>
         <li> <a href="hardware.html"> Hardware </a></li>
@@ -111,33 +103,139 @@
 
 
     <!-- Navbar Ends Here -->
-    
+
     <h1> How to Code a Webpage</h1>
-<p  style="text-align:center"> Here I will be using my own hardware page to show you how to code and create a webpage! </p>
-<h2> Headers </h2>
-<div class="double">
-     <h3>Step 1: HTML for your Headers </h3> 
-    <p> Headers are a big part of organization. They will allow you to tell your viewer what each new section is about. Through html, headers will naturally stand out more compared to regular text.</p>
-    <br>
-    <p> <b> Header Tag</b></p>
-    <p> When you type into your html file you will start your header with:</p> 
-    <p style="text-align: center; color: red"> <b>&lt;h1&gt; &lt;/h1&gt; </b></p>
-      <p style="text-align:right">Your code should look like this. </p>
+    <p style="text-align:center"> Here I will be using my own hardware page to show you how to code and create a webpage! </p>
+    <h2> Headers </h2>
+    <div class="double">
+        <h3>Step 1: HTML for your Headers </h3>
+        <p> Headers are a big part of organization. They will allow you to tell your viewer what each new section is about. Through html, headers will naturally stand out more compared to regular text.</p>
+        <br>
+        <p> <b> Header Tag</b></p>
+        <p> When you type into your html file you will start your header with:</p>
+        <p style="text-align: center; color: red"> <b>&lt;h1&gt; &lt;/h1&gt; </b></p>
+        <p style="text-align:right">Your code should look like this. </p>
         <img src="images/Headerscreenshot.png" style="height:70px; float:right;" />
-  <p>Header 1 will show up as the biggest and most domaniant header. Further along, when you want to head the individual sections of your webpage, you can number your header as 2 and up. Lower-numbered headers will be be smaller and will not stand out as much. For my Hardware page specifcally, I only used "h2" to head the different categories so that I could keep the size and styling of the headers consistent.</p> 
-  
+        <p>Header 1 will show up as the biggest and most domaniant header. Further along, when you want to head the individual sections of your webpage, you can number your header as 2 and up. Lower-numbered headers will be be smaller and will not stand
+            out as much. For my Hardware page specifcally, I only used "h2" to head the different categories so that I could keep the size and styling of the headers consistent. </p>
 </div>
+       
+<div class="double">
+    <img src="images/step1html.png" style="width:550px;border:0px"/>
+</div>
+
 <div class="double">
     <h3> Step 2: CSS for your Headers</h3>
     <p> CSS for your Headers will allow you to decorate your headers with borders, color, and fonts, while also allowing you to position where they go.</p>
-    
+    <h4> Centering your Headers</h4>
+    <img src="images/textalign.png" style="height:140px; float:right;" />
+    <p> At this point, all of our headers are flushed all the way to the left. However, I want to center all of my headers so that the focus is in the middle of the page. To do this I typed the following under my style tag:
+        <p style="color:red;text-align:center;"><b>text-align: center;</b></p>
+        <h4> Borders </h4>
+        <p> Since I have two different headers of different importance, I want to incorporate another design element that will draw more attention to my h1 header at the top of the page. I can do this through different styled borders.</p>
+        <p> Thus, in my style tag, I coded a solid border for my h1 header, and a dotted border for all of my h2 tags, using the phrases:</p>
+         <img src="images/borderscreenshot.png" style="height:148px; float:left;" />
+        <p style="color:red;text-align:center;"> <b>border:</b> 2px <b>solid</b> gray; </p>
+        <p style="color:red;text-align:center;"><b>border:</b> 8px <b>dotted</b> khaki;</p>
+        <p> (the unbolded information are design elements for the border width and color) </p>
+ 
 </div>
-<h2> Tables </h2>    
-
+       
 <div class="double">
-    <h3> Step 3: HTML for your Tables</h3>
-    
-    
+    This is what it should look like!
 </div>
 
-    </body>
+    <h2> Tables </h2>
+
+    <div class="double">
+        <h3> Step 3: HTML for your Tables</h3>
+        <p> Tables, when making a website, are a sufficent tool to organize your information and group text together. For instance, throughout your page you can use tables to separate different topics. However, one disadvantage of tables is that certain common
+            commands will not work with them. In general, they are more limiting in terms of designing a website. A better alternative would to use a tool called "divs," (short for divisions). Divs are still capable of achieving the same look tables can
+            create, yet it will allow you to incorporate more design elements. On the other hand, I started my website unsure of what a "div" was so I decided to use tables instead, which still gets the job done. </p>
+        <h4> HTML for Tables</h4>
+        <img src="images/tablesscreenshot.png" style="height: 130px; float:right;" />
+        <p style="color:red"> <b> &lt;table&gt; &lt;/table&gt;</b> </p>
+        <p> This tag will mark the start end of the table</p>
+        <p style="color:red"> <b>&lt;tr&gt; &lt;/tr&gt;</b> </p>
+        <p> "tr" will indicate where a table row starts. Add another table row when you want to make another row below. </p>
+        <p style="color:red"><b> &lt;td&gt; &lt;/td&gt;</b> </p>
+        <p> Finally, The tag "td" is where you will insert all of your table data. When you add more "td" tags in your table row, you will create more columns.</p>
+
+    </div>
+           
+<div class="double">
+    This is what it should look like!
+</div>
+
+    <div class="double">
+         <h3> Step 4: CSS for your tables </h3>   
+         <h4> Background Color</h4>
+         <p> Since I have a set background image for my webpage, text will not show up as clearly when only placed on top of the set background. To create more contrast between the words and the background, I decided to color in the background of the table so that the text would stand out more.</p> 
+             <img src="images/CSStable.png" style="height: 140px; float:left;" />
+         <p>This can be done by going back to the style tag and setting the background color for the tables specifically. This element will be formatted like this:</p>
+         <p style="color:red; text-align: center"> <b> background:</b> white;</p>
+         <p> (any other color can be switched our for white) </p>
+         <h4> Borders </h4>
+         <img src="images/tableborders.png" style="height: 100px; float:right;" />
+         <p> To make my tables stand out more, I decided to create a border for all of my tables. This can be done the same way you can add borders to your headers. However, you must add the phrase "border: 2px solid gray;" to "table" under your style tag.</p>
+    </div>
+           
+<div class="double">
+    This is what it should look like!
+</div>
+
+    <h2> Images </h2>
+    <div class="double"> 
+    <h3> Step 5: HTML for Images </h3>
+    <p> Images are important in a webpage. They allow the viewer to better understand the topic by giving them a visual to associate the text with.</p>
+    <p> When adding in images to your code, you can either upload them from your own files or from the internet. For my hardware page in particular, I only got images from the internet. </p>
+    <img src="images/imagescreenshot.png" style="height: 53px" />
+    <p> Thus, to insert images from the internet, you would use the tag: </p>
+    <p style="color:red;text-align:center"> <b> &lt;img src=&quot;*insert url here*/&gt;</b></p>
+ 
+    </div>
+           
+<div class="double">
+    This is what it should look like!
+</div>
+
+    <div class="double">
+    <h3> Step 6: CSS for Images </h3>
+    <p> There are many styling elements that can be applied to images, some of which include adding borders, changing the height, or width.</p>
+    <h4> Height OR Width </h4>
+    <p> Often times when I get an image from the internet, the size of the image is too large or too small to fit in my table. To solve this problem, CSS allows me to set the height or the width of the picture. </p>
+    <img src= "images/heightandwidth.png" style="height: 60px"/>
+    <p> To set the height and the width, you can nest a style tag within your picture tag. After your picture url, you will write:</p>
+    <p style="color:red;text-align:center"> &lt;img src=&quot;*insert url here*<b> style="height:___px"</b> /&gt;</p>
+    <p style="color:red;text-align:center"> &lt;img src=&quot;*insert url here*<b> style="width:___px"</b> /&gt;</p>
+    <p> Usually you will only set one or the other, because once you set one, it will dialate the picture proportionally. </p>
+    <img src= "images/imageborders.png" style="height: 120px; float:right" />
+    <h4> Borders </h4>
+    <p> As for tables and headers, the CSS tag for headers will remain the same; however, it will be written under the image tag under CSS. </p>
+   
+    
+    
+    </div>
+           
+<div class="double">
+    This is what it should look like!
+</div>
+
+<h2> What to do when you get stuck!</h2>
+<div style="width:80%; align:center" class="double">
+    <h3> </h3>
+</div>
+    
+</body>
+
+
+<style>
+        h1 { 
+            border: 2px solid gray;
+        }
+        
+        h2 {  
+            border: 8px dotted Khaki;
+        }
+</style>
+
