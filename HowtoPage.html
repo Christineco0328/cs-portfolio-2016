@@ -81,6 +81,8 @@
         .center {
             margin: auto;
             border: 15px double gray;
+            padding: 100px;
+          
         }
         
         .doubleborder {
@@ -107,7 +109,7 @@
     <h1> How to Code a Webpage</h1>
     <p style="text-align:center"> Here I will be using my own hardware page to show you how to code and create a webpage! </p>
     <h2> Headers </h2>
-    <div class="double">
+    <div class="double" id=rcorners1>
         <h3>Step 1: HTML for your Headers </h3>
         <p> Headers are a big part of organization. They will allow you to tell your viewer what each new section is about. Through html, headers will naturally stand out more compared to regular text.</p>
         <br>
@@ -120,20 +122,20 @@
             out as much. For my Hardware page specifcally, I only used "h2" to head the different categories so that I could keep the size and styling of the headers consistent. </p>
 </div>
        
-<div class="double">
+<div class="double" id=rcorners1>
     <img src="images/step1html.png" style="width:550px;border:0px"/>
 </div>
 
-<div class="double">
+<div class="double" id=rcorners1>
     <h3> Step 2: CSS for your Headers</h3>
     <p> CSS for your Headers will allow you to decorate your headers with borders, color, and fonts, while also allowing you to position where they go.</p>
     <h4> Centering your Headers</h4>
     <img src="images/textalign.png" style="height:140px; float:right;" />
-    <p> At this point, all of our headers are flushed all the way to the left. However, I want to center all of my headers so that the focus is in the middle of the page. To do this I typed the following under my style tag:
+    <p> At this point, all of our headers are flushed all the way to the left. However, I want to center all of my headers so that the focus is in the middle of the page. To do this I used the property of "text-align" and set the value as "center." It should be formatted like this under your style tag:
         <p style="color:red;text-align:center;"><b>text-align: center;</b></p>
         <h4> Borders </h4>
         <p> Since I have two different headers of different importance, I want to incorporate another design element that will draw more attention to my h1 header at the top of the page. I can do this through different styled borders.</p>
-        <p> Thus, in my style tag, I coded a solid border for my h1 header, and a dotted border for all of my h2 tags, using the phrases:</p>
+        <p> Thus, in my style tag, I coded a solid border under my h1 selector, and a dotted border for all of my h2 tags, using the declarations:</p>
          <img src="images/borderscreenshot.png" style="height:148px; float:left;" />
         <p style="color:red;text-align:center;"> <b>border:</b> 2px <b>solid</b> gray; </p>
         <p style="color:red;text-align:center;"><b>border:</b> 8px <b>dotted</b> khaki;</p>
@@ -141,21 +143,21 @@
  
 </div>
        
-<div class="double">
+<div class="double" id=rcorners1>
     This is what it should look like!
 </div>
 
     <h2> Tables </h2>
 
-    <div class="double">
+    <div class="double" id=rcorners1>
         <h3> Step 3: HTML for your Tables</h3>
-        <p> Tables, when making a website, are a sufficent tool to organize your information and group text together. For instance, throughout your page you can use tables to separate different topics. However, one disadvantage of tables is that certain common
-            commands will not work with them. In general, they are more limiting in terms of designing a website. A better alternative would to use a tool called "divs," (short for divisions). Divs are still capable of achieving the same look tables can
+        <p> Tables, when making a website, are a sufficent selector used to organize your information and group text together. For instance, throughout your page you can use tables to separate different topics. However, one disadvantage of tables is that certain common
+            commands will not work with them. In general, they are more limiting in terms of designing a website. A better alternative would to use a selector called "divs," (short for divisions). Divs are still capable of achieving the same look tables can
             create, yet it will allow you to incorporate more design elements. On the other hand, I started my website unsure of what a "div" was so I decided to use tables instead, which still gets the job done. </p>
         <h4> HTML for Tables</h4>
         <img src="images/tablesscreenshot.png" style="height: 130px; float:right;" />
         <p style="color:red"> <b> &lt;table&gt; &lt;/table&gt;</b> </p>
-        <p> This tag will mark the start end of the table</p>
+        <p> This tag will mark the start and end of the table</p>
         <p style="color:red"> <b>&lt;tr&gt; &lt;/tr&gt;</b> </p>
         <p> "tr" will indicate where a table row starts. Add another table row when you want to make another row below. </p>
         <p style="color:red"><b> &lt;td&gt; &lt;/td&gt;</b> </p>
@@ -163,11 +165,11 @@
 
     </div>
            
-<div class="double">
+<div class="double" id=rcorners1>
     This is what it should look like!
 </div>
 
-    <div class="double">
+    <div class="double" id=rcorners1>
          <h3> Step 4: CSS for your tables </h3>   
          <h4> Background Color</h4>
          <p> Since I have a set background image for my webpage, text will not show up as clearly when only placed on top of the set background. To create more contrast between the words and the background, I decided to color in the background of the table so that the text would stand out more.</p> 
@@ -180,12 +182,12 @@
          <p> To make my tables stand out more, I decided to create a border for all of my tables. This can be done the same way you can add borders to your headers. However, you must add the phrase "border: 2px solid gray;" to "table" under your style tag.</p>
     </div>
            
-<div class="double">
+<div class="double" id=rcorners1>
     This is what it should look like!
 </div>
 
     <h2> Images </h2>
-    <div class="double"> 
+    <div class="double" id=rcorners1> 
     <h3> Step 5: HTML for Images </h3>
     <p> Images are important in a webpage. They allow the viewer to better understand the topic by giving them a visual to associate the text with.</p>
     <p> When adding in images to your code, you can either upload them from your own files or from the internet. For my hardware page in particular, I only got images from the internet. </p>
@@ -195,11 +197,11 @@
  
     </div>
            
-<div class="double">
+<div class="double" id=rcorners1>
     This is what it should look like!
 </div>
 
-    <div class="double">
+    <div class="double" id=rcorners1>
     <h3> Step 6: CSS for Images </h3>
     <p> There are many styling elements that can be applied to images, some of which include adding borders, changing the height, or width.</p>
     <h4> Height OR Width </h4>
@@ -217,12 +219,12 @@
     
     </div>
            
-<div class="double">
+<div class="double" id=rcorners1 >
     This is what it should look like!
 </div>
 
 <h2> What to do when you get stuck!</h2>
-<div style="width:80%; align:center" class="double">
+<div class="double" id=rcorners1>
     <h3> </h3>
 </div>
     

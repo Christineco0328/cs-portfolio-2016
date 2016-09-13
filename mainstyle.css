@@ -50,3 +50,8 @@
 #harddrive {
     display: inline-block;
 }
+
+ #rcorners1 {
+            border-radius: 25px;
+            padding: 20px;
+  }
