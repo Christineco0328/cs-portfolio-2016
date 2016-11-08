@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Calculator </title>
-    <link rel="stylesheet" href="mainstyle.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
-      <style>
+
+        <title> Todo List </title>
+           <link rel="stylesheet" href="mainstyle.css" type="text/css" />
+           <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <style>
         body{
             margin: 0;
         }
@@ -23,11 +24,35 @@
             color: black;
             text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
 }
-        .div {
+    
+        h2 {
+            
+            font-size: 30px;
+            font-family:'Courgette', cursive;
+            font-weight: bold;
+            margin-left: 20%;
+            margin-right: 15%
+        }
+        p{
+            font-size: 20px;
+            font-family:'Courgette', cursive;
+            font-weight: bold;
+            margin-left: 20%;
+            margin-right: 15%   
+        }
+        
+        img {
+            background: white;
+            border: 2px solid gray;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        .ul {
             background-color: white;
             font-size: 30px;
-            width:280px;
-            height:100px;
+            width:50%;
+            height:500px;
             display:inline-block;
             border-radius: 25px;
             font-family: 'Courgette', cursive;
@@ -36,15 +61,22 @@
             vertical-align:middle;
             text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
             box-shadow: 5px 4px 7px  #595959;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-left: 20%;
+            margin-right: 15%;
+            margin-top: 25px;
+            text-align:left;
+            overflow: auto;
+            list-style-position: inside;
+            list-style-type:circle;
+            line-height: 190%;
+            
+            
+            
+           
         }
-         .div:hover {
-            font-size:40px;
-        }
-        .div:active {
-            font-size:40px;
-        }
-        
-        
+    
         .float {
             float: left;
         }
@@ -63,17 +95,15 @@
         .doubleborder {
             border: 10px double gray;
         }
-        
-        .inputposition{
-            margin-top: 7%;
+         .inputposition{
             margin-left: 20%;
             font-family: 'Courgette', cursive;
             font-weight: bold;
             font-size:30px;
             text-align:center;
             border-radius: 25px;
-            height: 100px;
-            width:250px;
+            height: 50px;
+            width:600px;
             text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
             box-shadow: 5px 5px 7px #595959;
             
@@ -82,26 +112,6 @@
             font-size:40px;
         }
         .inputposition:active {
-            font-size:40px;
-        }
-        
-        .inputposition2{
-            height: 100px;
-            width: 250px;
-            border: 12px double gray;
-            font-family: 'Courgette', cursive;
-            font-weight: bold;
-            font-size:30px;
-            text-align:center;
-            border-radius: 25px;
-            text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
-            box-shadow: 5px 5px 7px #595959;
-            
-        }
-        .inputposition2:hover {
-            font-size:40px;
-        }
-        .inputposition2:active {
             font-size:40px;
         }
         select, option{
@@ -114,8 +124,8 @@
             text-align:center;
             text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
         }
-      
-        .button {
+            .button {
+             
             font-family: 'Courgette', cursive;
             font-weight: bold;
             font-size:18px;
@@ -123,6 +133,7 @@
             border-radius: 100%;
             background-color: Khaki;
             text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+            height:50px;
          }
           .button:hover {
               background-color:#ffff99;
@@ -134,12 +145,30 @@
               transform:translateY(4px);
           }
          
+          
+         .inputdate {
+            margin-left: 20%;
+            margin-right: 15%;
+            background-color:none;
+            display:inline-block;
+            border:none;
+            border-bottom: 2px solid black;
+            background-color:inherit;
+            margin-bottom:10px;
+            font-family: 'Courgette', cursive;
+            font-weight: bold;
+            font-size:26px;
+            width:400px;
+         }
          
+         .strikethrough {
+             text-decoration: line-through;
+         }
     </style>
+
     </head>
-    
     <body>
-<!-- Navbar Ends Here -->
+        <!-- Navbar Ends Here -->
     <ul id="navbar">
         <li> <a href="index.html"> About Me </a></li>
         <li> <a href="hardware.html"> Hardware </a></li>
@@ -150,30 +179,36 @@
         <li> <a href="#"> Big Project </a></li>
     </ul>
     <!-- Navbar Ends Here -->
+    <h1> To Do List </h1>
+    <br>
+    <br>
+    <br>
+    <h2> Things to Do: </h2>
+    <p> Today's date: </p>
+    <input class="inputdate">
+    <br>
+    <input id="listEntry" type="text" class="inputposition doubleborder"> 
+   
+        <select id="styleButton"> 
+           <option value="black"> none </option>
+           <option value="red"> red </option>
+           <option value="purple"> purple </option>
+           <option value="blue"> blue </option>
+           
+        </select>
+         
+   
+    <button id="submit" class="button"> Submit </button>
+    <button id="clearAll" class="button"> Clear All </button>
+    <br>
+   
+   
+    <br>
+    <br>
+    <br>
+    <ul id="list" class="doubleborder ul"> </ul>
     
-<h1> Calculator </h1>  
-    <!-- input 1 for calculator -->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-<input id="factor1" class="inputposition doubleborder"> 
-    <!-- different operations  -->
-<select id="operation">
-    <option value="+"> + </option>
-    <option value="-"> - </option>
-    <option value="*"> * </option>
-    <option value="/"> / </option>
-    <option value="^"> ^ </option>
-    <option value="%"> % </option>
-</select>
-<input id="factor2" class="inputposition2 doubleborder">
-<button class="button" id="answerButton" type="="> = </button>
-
-<div id="answerScreen" class="doubleborder div" > Answer will show up here! </div>
-    
-   <script src="calculator.js"> </script>
+      <script src="todolist.js"> </script>
     </body>
+    
 </html>
