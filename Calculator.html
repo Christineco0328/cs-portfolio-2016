@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Calculator </title>
+
+<head>
+    <title> Calculator </title>
     <link rel="stylesheet" href="mainstyle.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
-      <style>
-        body{
+    <style>
+        body {
             margin: 0;
         }
+        
         html {
             background: url("http://bgfons.com/upload/light_texture2245.jpg") no-repeat center center fixed;
             background-size: cover;
@@ -21,29 +23,31 @@
             margin-right: 5%;
             font-family: 'Courgette', cursive;
             color: black;
-            text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
-}
+            text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+        }
+        
         .div {
             background-color: white;
             font-size: 30px;
-            width:280px;
-            height:100px;
-            display:inline-block;
+            width: 280px;
+            height: 100px;
+            display: inline-block;
             border-radius: 25px;
             font-family: 'Courgette', cursive;
             font-weight: bold;
-            text-align:center;
-            vertical-align:middle;
-            text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
-            box-shadow: 5px 4px 7px  #595959;
-        }
-         .div:hover {
-            font-size:40px;
-        }
-        .div:active {
-            font-size:40px;
+            text-align: center;
+            vertical-align: middle;
+            text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+            box-shadow: 5px 4px 7px #595959;
         }
         
+        .div:hover {
+            font-size: 40px;
+        }
+        
+        .div:active {
+            font-size: 40px;
+        }
         
         .float {
             float: left;
@@ -57,101 +61,104 @@
             margin: auto;
             border: 15px double gray;
             padding: 100px;
-          
         }
         
         .doubleborder {
             border: 10px double gray;
         }
         
-        .inputposition{
+        .inputposition {
             margin-top: 7%;
             margin-left: 20%;
             font-family: 'Courgette', cursive;
             font-weight: bold;
-            font-size:30px;
-            text-align:center;
+            font-size: 30px;
+            text-align: center;
             border-radius: 25px;
             height: 100px;
-            width:250px;
-            text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+            width: 250px;
+            text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
             box-shadow: 5px 5px 7px #595959;
-            
-        }
-        .inputposition:hover {
-            font-size:40px;
-        }
-        .inputposition:active {
-            font-size:40px;
         }
         
-        .inputposition2{
+        .inputposition:hover {
+            font-size: 40px;
+        }
+        
+        .inputposition:active {
+            font-size: 40px;
+        }
+        
+        .inputposition2 {
             height: 100px;
             width: 250px;
             border: 12px double gray;
             font-family: 'Courgette', cursive;
             font-weight: bold;
-            font-size:30px;
-            text-align:center;
+            font-size: 30px;
+            text-align: center;
             border-radius: 25px;
-            text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+            text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
             box-shadow: 5px 5px 7px #595959;
-            
         }
+        
         .inputposition2:hover {
-            font-size:40px;
+            font-size: 40px;
         }
+        
         .inputposition2:active {
-            font-size:40px;
+            font-size: 40px;
         }
-        select, option{
+        
+        select,
+        option {
             font-family: 'Courgette', cursive;
             font-weight: bold;
-            font-size:18px;
+            font-size: 18px;
             width: 100px;
             border-radius: 25px;
             background-color: Khaki;
-            text-align:center;
-            text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+            text-align: center;
+            text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
         }
-      
+        
         .button {
             font-family: 'Courgette', cursive;
             font-weight: bold;
-            font-size:18px;
+            font-size: 18px;
             width: 100px;
             border-radius: 100%;
             background-color: Khaki;
-            text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
-         }
-          .button:hover {
-              background-color:#ffff99;
-          }
-          
-          .button:active {
-              background-color:#ffff99;
-              box-shadow: 5px 5px 7px #737373;
-              transform:translateY(4px);
-          }
-         
-         
+            text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .button:hover {
+            background-color: #ffff99;
+        }
+        
+        .button:active {
+            background-color: #ffff99;
+            box-shadow: 5px 5px 7px #737373;
+            transform: translateY(4px);
+        }
     </style>
-    </head>
-    
-    <body>
-<!-- Navbar Ends Here -->
+</head>
+
+<body>
+    <!-- Navbar Ends Here -->
     <ul id="navbar">
         <li> <a href="index.html"> About Me </a></li>
         <li> <a href="hardware.html"> Hardware </a></li>
         <li> <a href="HowtoPage.html"> How to Page </a></li>
         <li> <a href="Calculator.html"> Calculator </a></li>
         <li> <a href="todolist.html"> To Do list </a></li>
+        <li> <a href="HowtoPage2.html"> How to Page 2.0 </a></li>
         <li> <a href="#"> Vindinium </a></li>
         <li> <a href="#"> Big Project </a></li>
     </ul>
     <!-- Navbar Ends Here -->
-    
-<h1> Calculator </h1>  
+
+    <h1> Calculator </h1>
     <!-- input 1 for calculator -->
     <br>
     <br>
@@ -159,9 +166,9 @@
     <br>
     <br>
     <br>
-<input id="factor1" class="inputposition doubleborder"> 
+    <input id="factor1" class="inputposition doubleborder">
     <!-- different operations  -->
-<select id="operation">
+    <select id="operation">
     <option value="+"> + </option>
     <option value="-"> - </option>
     <option value="*"> * </option>
@@ -169,11 +176,13 @@
     <option value="^"> ^ </option>
     <option value="%"> % </option>
 </select>
-<input id="factor2" class="inputposition2 doubleborder">
-<button class="button" id="answerButton" type="="> = </button>
+    <input id="factor2" class="inputposition2 doubleborder">
+    <button class="button" id="answerButton" type="="> = </button>
 
-<div id="answerScreen" class="doubleborder div" > Answer will show up here! </div>
-    
-   <script src="calculator.js"> </script>
-    </body>
+    <div id="answerScreen" class="doubleborder div"> Answer will show up here! </div>
+
+    <script src="calculator.js">
+    </script>
+</body>
+
 </html>

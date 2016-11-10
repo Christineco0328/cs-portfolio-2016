@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
-    <head>
 
-        <title> Todo List </title>
-           <link rel="stylesheet" href="mainstyle.css" type="text/css" />
-           <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+<head>
+
+    <title> Todo List </title>
+    <link rel="stylesheet" href="mainstyle.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
     <style>
-        body{
+        body {
             margin: 0;
         }
+        
         html {
             background: url("http://bgfons.com/upload/light_texture2245.jpg") no-repeat center center fixed;
             background-size: cover;
@@ -22,61 +24,56 @@
             margin-right: 5%;
             font-family: 'Courgette', cursive;
             color: black;
-            text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
-}
-    
+            text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+        }
+        
         h2 {
-            
             font-size: 30px;
-            font-family:'Courgette', cursive;
+            font-family: 'Courgette', cursive;
             font-weight: bold;
             margin-left: 20%;
             margin-right: 15%
         }
-        p{
+        
+        p {
             font-size: 20px;
-            font-family:'Courgette', cursive;
-            font-weight: bold;
+            font-family: 'Courgette', cursive;
             margin-left: 20%;
-            margin-right: 15%   
+            margin-right: 15%;
         }
         
         img {
-            background: white;
-            border: 2px solid gray;
-            margin-left: 10px;
             margin-right: 10px;
+            margin-left: 1200px;
+            display: inline-block;
+            position: absolute;
+            margin-top: 100px;
         }
         
         .ul {
             background-color: white;
             font-size: 30px;
-            width:50%;
-            height:500px;
-            display:inline-block;
+            width: 55%;
+            height: 500px;
+            display: inline-block;
             border-radius: 25px;
             font-family: 'Courgette', cursive;
-            font-weight: bold;
-            text-align:center;
-            vertical-align:middle;
-            text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
-            box-shadow: 5px 4px 7px  #595959;
+            text-align: center;
+            vertical-align: middle;
+            text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+            box-shadow: 5px 4px 7px #595959;
             padding-left: 30px;
             padding-right: 30px;
             margin-left: 20%;
             margin-right: 15%;
             margin-top: 25px;
-            text-align:left;
+            text-align: left;
             overflow: auto;
             list-style-position: inside;
-            list-style-type:circle;
+            list-style-type: circle;
             line-height: 190%;
-            
-            
-            
-           
         }
-    
+        
         .float {
             float: left;
         }
@@ -89,92 +86,97 @@
             margin: auto;
             border: 15px double gray;
             padding: 100px;
-          
         }
         
         .doubleborder {
             border: 10px double gray;
         }
-         .inputposition{
+        
+        .inputposition {
             margin-left: 20%;
             font-family: 'Courgette', cursive;
-            font-weight: bold;
-            font-size:30px;
-            text-align:center;
+            font-size: 30px;
+            text-align: center;
             border-radius: 25px;
             height: 50px;
-            width:600px;
-            text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+            width: 580px;
+            text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
             box-shadow: 5px 5px 7px #595959;
-            
         }
+        
         .inputposition:hover {
-            font-size:40px;
+            font-size: 40px;
         }
+        
         .inputposition:active {
-            font-size:40px;
+            font-size: 40px;
         }
-        select, option{
+        
+        select,
+        option {
             font-family: 'Courgette', cursive;
             font-weight: bold;
-            font-size:18px;
+            font-size: 18px;
             width: 100px;
             border-radius: 25px;
             background-color: Khaki;
-            text-align:center;
-            text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+            text-align: center;
+            text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+            z-index: -1;
         }
-            .button {
-             
+        
+        .button {
             font-family: 'Courgette', cursive;
             font-weight: bold;
-            font-size:18px;
+            font-size: 18px;
             width: 100px;
             border-radius: 100%;
             background-color: Khaki;
-            text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
-            height:50px;
-         }
-          .button:hover {
-              background-color:#ffff99;
-          }
-          
-          .button:active {
-              background-color:#ffff99;
-              box-shadow: 5px 5px 7px #737373;
-              transform:translateY(4px);
-          }
-         
-          
-         .inputdate {
+            text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+            height: 50px;
+        }
+        
+        .button:hover {
+            background-color: #ffff99;
+        }
+        
+        .button:active {
+            background-color: #ffff99;
+            box-shadow: 5px 5px 7px #737373;
+            transform: translateY(4px);
+        }
+        
+        .inputdate {
             margin-left: 20%;
             margin-right: 15%;
-            background-color:none;
-            display:inline-block;
-            border:none;
+            background-color: none;
+            display: inline-block;
+            border: none;
             border-bottom: 2px solid black;
-            background-color:inherit;
-            margin-bottom:10px;
+            background-color: inherit;
+            margin-bottom: 10px;
             font-family: 'Courgette', cursive;
             font-weight: bold;
-            font-size:26px;
-            width:400px;
-         }
-         
-         .strikethrough {
-             text-decoration: line-through;
-         }
+            font-size: 28px;
+            width: 400px;
+        }
+        
+        .strikethrough {
+            text-decoration: line-through;
+        }
     </style>
 
-    </head>
-    <body>
-        <!-- Navbar Ends Here -->
+</head>
+
+<body>
+    <!-- Navbar Ends Here -->
     <ul id="navbar">
         <li> <a href="index.html"> About Me </a></li>
         <li> <a href="hardware.html"> Hardware </a></li>
         <li> <a href="HowtoPage.html"> How to Page </a></li>
-        <li> <a href="Calculator.html"> Calculator </a></li>
-        <li> <a href="todolist.html"> To Do list </a></li>
+        <li> <a href="Calculator.html" class="dropdownele"> Calculator </a></li>
+        <li> <a href="todolist.html" > To Do list </a></li>
+        <li> <a href="HowtoPage2.html" class="dropdown"> How to Page 2.0 </a> </li>
         <li> <a href="#"> Vindinium </a></li>
         <li> <a href="#"> Big Project </a></li>
     </ul>
@@ -187,28 +189,35 @@
     <p> Today's date: </p>
     <input class="inputdate">
     <br>
-    <input id="listEntry" type="text" class="inputposition doubleborder"> 
-   
-        <select id="styleButton"> 
+    <input id="listEntry" type="text" class="inputposition doubleborder">
+
+    <select id="styleButton"> 
            <option value="black"> none </option>
            <option value="red"> red </option>
            <option value="purple"> purple </option>
            <option value="blue"> blue </option>
+           <option value="bold"> bold </option>
+           <option value="italic"> italic </option>
            
         </select>
-         
-   
+
+
     <button id="submit" class="button"> Submit </button>
     <button id="clearAll" class="button"> Clear All </button>
+
     <br>
-   
-   
-    <br>
-    <br>
-    <br>
-    <ul id="list" class="doubleborder ul"> </ul>
-    
-      <script src="todolist.js"> </script>
-    </body>
-    
+    <img src="images/pencil.png" alt="pencil" style="height: 250px" />
+    <ul data-delete="nodelete" id="list" class="doubleborder ul"> </ul>
+
+    <script src="todolist.js">
+    </script>
+</body>
+
 </html>
+
+
+<!--<div class="dropdown"></div>-->
+<!--        <li> <a href="todolist.html" > To Do list </a></li>-->
+<!--            <div class="dropdown-content">-->
+<!--                <a href="HowtoPage2.html" class="dropdown"> How to Page 2.0 </a>-->
+<!--            </div>        -->
