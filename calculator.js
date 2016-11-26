@@ -15,9 +15,11 @@ answerButton.addEventListener("click", function(){
 //condition statement for when "+" is selected as an operation
 
     if (math === "+"){ 
+//parseInt will take the string of numbers it is given and then turn it into an integer    
         var a= parseInt(num1);
         var b= parseInt(num2);
         var c= a+b;
+//Whatever answerScreen.innerHTML is equal to is what is going to appear in the answerscreen (our div)        
         answerScreen.innerHTML= c;  
     }
 //If the initial "if" statement is false, program will check to see if next else if statement is true. 
