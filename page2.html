@@ -40,14 +40,20 @@
         h3 {
             font-family: 'Courgette', cursive;
             font-weight: bold;
+            margin-left: 3%;
+        }
+        
+        h4{
+            font-family: 'Courgette', cursive;
+            font-weight: bold;
+            margin-left: 4%;
         }
         
         p {
-            
             font-size: 18px;
             text-align: left;
             line-height: 150%;
-            margin-left: 15%;
+            margin-left:5%;
             margin-right:5%;
         }
         
@@ -62,13 +68,12 @@
         div {
             background: white;
             font-size: 20px;
-            Width: 60%;
+            Width: 58%;
             margin-left: 22%;
-            margin-right: 15%;
             margin-top: 10px;
-            display:inline-block;
             border-style: double;
             border: 15px double gray;
+            
         }
         
      
@@ -107,7 +112,7 @@
        
        footer ul li {
            background-color: inherit;
-           Width: 100%;
+           Width: 95%;
            text-align:center;
            margin-left: 50px;
           
@@ -139,18 +144,73 @@
 <h2> Creating the Javascript for your Calculator</h2>  
     <div class="double" id=rcorners1>
        <h3> Step 1: Variables </h3>
-        <p> To give our calculator the capability of being able to carry out different functions, we can use the select and option tags to list out the different operations the calculator can do. Your tag should look like this:</p>
-        <p style="text-align: center; color: red"> <b> &lt;select&gt;&lt;/select&gt;</b></p>
-        <p> Within your select tag you are going to nest each of your option tags where you will put in each of the different operations. Then, we must give each of these options a value according to thier operation</p>
+        <p> Variables are a way of storing information. Once we set something equal to the created variable, we can simply use the varible whenever we need to refer or include the information that we set it equal to. The main purpose of doing this is so that we do not have to write out the entire piece of data each time we need it in our code. 
+            <br> Setting your variable looks like this: </p>
+        <p style="text-align: center; color: blue"> <b> var *insert variable name* = </b></p>
         
-        <p>Your option tag should look like this:</p>
-        <p style="text-align: center; color: red"> <b> &lt;option&gt;&lt;/option&gt;</b></p>
-        <p style="text-align:left">Your code should look like this. </p>
-        <img src="" style="height:70px; float:right;" />
-        <p></p>
+    <h3> Naming your Variable </h3>
+    <p> When naming your variable, make it something relevant. Just by looking at the variable, you should be able to tell which piece of information the variable contains. In addition, you don't want to make it overly complicated given that the main purpose of using a variable is to make your code simplier. </p>
+        
     </div>        
     
+<h2> Get Element by Id</h2>
+    <div class="double" id=rcorners1>
+        <h3> Step 2: Grabbing information from you HTML</h3>
+        <p> In order to work with the different elements we created in our HTML, we have to "grab" them from our HTML from our javascript page. This can be done through the tag <i> document.GetElementById("*insert Id of Element");</i>  </p>
+        <p> By inserting the unique ID of a certain element, we have grabbed that element onto our javascript. This will allow us to manipulate that specific element through javascript.</p>
+        <p> Then, for each ID we are going to set them equal to a variable. You will end up with five different variables for five different elements. It should look like this:</p>
+        <img style="margin-left:25%" src="images/variables.png">
 
+    </div>
+    
+<h2> Add Event Listeners </h2>
+     
+       <div class="double" id=rcorners1 style="margin-left:22%;display:inline-block;width:58%;">
+        <h3> Step 3: addEventListener </h3>
+        <p> Calculators require a button that will listen for the user's "click" so that the program knows to follow through with the operation. Thus, we can use "addEventListeners" to give the button the capability to be responsive of the users click.  </p>
+        <p> There are many components and a certain format required to create an "addEventListener" for a specifc element. This process can be divided into different components.</p>
+        <img style="margin-left:25%;width:50%" src="images/addEventListener.png">
+        <p> Your code should follow the same format shown in the image above, however, the names of your variables will vary.</p>
+    </div>
+     
+     <div style="width:450px;display:inline-block;margin-left:22%;margin-top:1%;border-radius: 25px;"> 
+           <p style="text-align:center"><b>1</b></p>
+           <p style="margin:5%"> First, you will insert the name of the variable attached to your "equal" button so that the program knows which element to attach the add event listener to. Then, this will be followed by the statement ".addEventListener". Be mindful of this capitalization, and if not followed exactly the program will be unable to run. </p>
+       </div>
+         
+       <div style="width:410px;height;display:inline-block;margin-left:1%;margin-top:1%;border-radius: 25px;">
+        <p style="text-align:center;"><b>2</b></p>
+        <p> Next, insert the phrase,</p>
+        <p style="text-align: center; color: blue"> <b> ("click", function(){ </b></p>
+        <p style="margin:5%">By inserting "click", the program will now know that it has to listen for the user to <b>click</b> the button in order for it to carry out the function.</p>
+        </div>
+    
+        <div style="width:60%;display:inline-block;margin-left:22%;margin-top:1%;border-radius: 25px;">
+        <p style="text-align:center"><b>3</b></p>
+        <p style="margin:5%"> Then, within the curly brackets, we must tell the program other elements that it has to take into the account of at the press of the equal button. This will involve our variables for our inputs and select elements since our calculator has to be aware of the numbers it has to work with and the operation it is executing. Thus, our function will involve three different variables. Create two different variables, each setting them to an input variable followed by <b>.value</b>. This will indicate to the program that it has to take the value that is within the input box. Finally, we will create a variable for our select element indicating the operation. Once again, take the name of the variable for the select element and follow it with <b>.value</b>. </p>
+        </div>
+        
+        
+<h2> Javascript Math Operations </h2>
+     
+ 
+    <div class="double" id=rcorners1>
+        <h3> Step 4: If statements </h3>
+        <p> If statements allow us to write functions that the program will carry out based on whether a certain statement is true or false. In the terms of our calculator, we will use an if statement to tell the program to execute our first operation. </p>
+        <p> We will begin writting within the curly brackets of the addEventListener we just created. </p>
+        <h4> Format for Condition</h4> 
+        <p> First, we will type "if" to indicate to the program that we are writing an if statement. Then, within parentheses is where we will write our condition. Insert the name of the variable that is set to *the name of the variable linked to our select element*.value (the setting of these variables was established in the addEventListener step). Once you have this name follow it with three equal signs and the operation in quotations marks. In javascript, the significance of the three equal signs is used to check if both sides of the equal signs are in fact equal. If true, the program will proceed into carrying out the codeblock. </p>
+        <h4> Writing the Codeblock</h4>
+        <p> Codeblock is the code that the program will run if the if statement is true. We will begin writing our codeblock within curly brackets. To carry out operations, we are going to need three different variables:></p>
+        <p> 1. Create a new variable and set it to <b> parseInt</b> followed by <b>(name of varible that is set to the first input element value)</b> established when we created our addEventListener. Don't forget the parentheses!</p> <p>The first part of our new variable, <b>parseInt</b> is the key factor in allowing the calculator to read what is put into the input element. When the user inserts a number into the element, the program naturally reads it as a string rather than a number. In javascript, there are three different types of data that variables can be set to: strings, numbers, and boolean. Strings hold information such as characters, letter, and symbols, all of which that are uncomprehensive to a calculator. Thus, we have to make sure that whatever is typed into the input element is stored as a number--another type of data that stores numbers for their numerical value rather than a character. ParseInt is what makes this possible. It takes the string that is input when the user writes in the input element, and converts it to a number--allowing the calculator to operate on the number that is input. </p>
+        <p> Then, we also then have to clarify to the program what it is taking the parseInt of. Thus, we must put the name of the var set to *input element var name*.value in parentheses. 
+        <p> 2. Since we have two inputs for two different factors to operate on, we need to follow the same steps used to create our first variable to create a second one. However this will </p>
+        <p></p>
+    </div>
+      
+       
+ 
+        
  <footer class="footer" id="rcorners1">
             <ul>
                  <li> <a href="HowtoPage2.html"> 1 </a></li>
