@@ -198,15 +198,39 @@
         <h3> Step 4: If statements </h3>
         <p> If statements allow us to write functions that the program will carry out based on whether a certain statement is true or false. In the terms of our calculator, we will use an if statement to tell the program to execute our first operation. </p>
         <p> We will begin writting within the curly brackets of the addEventListener we just created. </p>
+    </div>
+    <div class="double" id=rcorners1>
         <h4> Format for Condition</h4> 
         <p> First, we will type "if" to indicate to the program that we are writing an if statement. Then, within parentheses is where we will write our condition. Insert the name of the variable that is set to *the name of the variable linked to our select element*.value (the setting of these variables was established in the addEventListener step). Once you have this name follow it with three equal signs and the operation in quotations marks. In javascript, the significance of the three equal signs is used to check if both sides of the equal signs are in fact equal. If true, the program will proceed into carrying out the codeblock. </p>
-        <h4> Writing the Codeblock</h4>
-        <p> Codeblock is the code that the program will run if the if statement is true. We will begin writing our codeblock within curly brackets. To carry out operations, we are going to need three different variables:></p>
-        <p> 1. Create a new variable and set it to <b> parseInt</b> followed by <b>(name of varible that is set to the first input element value)</b> established when we created our addEventListener. Don't forget the parentheses!</p> <p>The first part of our new variable, <b>parseInt</b> is the key factor in allowing the calculator to read what is put into the input element. When the user inserts a number into the element, the program naturally reads it as a string rather than a number. In javascript, there are three different types of data that variables can be set to: strings, numbers, and boolean. Strings hold information such as characters, letter, and symbols, all of which that are uncomprehensive to a calculator. Thus, we have to make sure that whatever is typed into the input element is stored as a number--another type of data that stores numbers for their numerical value rather than a character. ParseInt is what makes this possible. It takes the string that is input when the user writes in the input element, and converts it to a number--allowing the calculator to operate on the number that is input. </p>
-        <p> Then, we also then have to clarify to the program what it is taking the parseInt of. Thus, we must put the name of the var set to *input element var name*.value in parentheses. 
-        <p> 2. Since we have two inputs for two different factors to operate on, we need to follow the same steps used to create our first variable to create a second one. However this will </p>
-        <p></p>
     </div>
+    <div class="double" id=rcorners1>
+        <h4> Writing the Codeblock</h4>
+        <p> Codeblock is the code that the program will run if the if statement is true. We will begin writing our codeblock within curly brackets. To carry out operations, we are going to need three different variables:</p>
+        
+        <p> 1. Create a new variable and set it to <b> parseInt</b> followed by <b>(name of varible that is set to the first input element value)</b> established when we created our addEventListener. Don't forget the parentheses!</p> 
+        <img style="margin-left:35%;width:30%" src="images/variableA.png">
+        <p>The first part of our new variable, <b>parseInt</b> is the key factor in allowing the calculator to read what is put into the input element. When the user inserts a number into the element, the program naturally reads it as a string rather than a number. In javascript, there are three different types of data that variables can be set to: strings, numbers, and boolean. Strings hold information such as characters, letter, and symbols, all of which that are uncomprehensive to a calculator. Thus, we have to make sure that whatever is typed into the input element is stored as a number--another type of data that stores numbers for their numerical value rather than a character. ParseInt is what makes this possible. It takes the string that is input when the user writes in the input element, and converts it to a number--allowing the calculator to operate on the number that is input. </p>
+        <p> Then, we also then have to clarify to the program what it is taking the parseInt of. Thus, we must put the name of the var set to *input element var name*.value in parentheses. 
+        <p> 2. Since we have two inputs for two different factors to operate on, we need to follow the same steps used to create our first variable to create a second one. However, this time we have to use the name of the variable set to our second input element. It should look something like this: </p>
+         <img style="margin-left:35%;width:30%" src="images/variableB.png">
+        <p>3. Our final variable will "add" our first and second varibles together. First we will create a new variable, using the keyword and name it. To tell the program to <b>add</b> our initial variables together, we can write the *name of first variable* + *name of second variable*. It should end up looking something of this format: </p>
+         <img style="margin-left:35%;width:30%" src="images/variableC.png">
+    </div>
+    <div class="double" id=rcorners1>
+        
+        <h4> Div for answer </h4>
+        <p> Then finally we will need have our answer to the equation be visual to the user. In other words, we are going to need to have our third variable appear in a div. This can be done using "<b>.innerHTML</b>." I first need to include the variable set to the div element in our HTML (this was done at steps one and two at the top of the page). This will then be followed by, <b>.innerHTML</b>. Finally, we will have this statement set, or equal, to *the name of your third variable*. As a whole, we see that the inner HTML of the div must have the contents of our third variable within it. You should have then achieved a statement that looks something like this: </p>
+        <img style="margin-left:35%;width:40%" src="images/innerHTML.png">
+    </div>
+    
+    
+    <div class="double" id=rcorners1>
+<h3> Step 5: Else statements</h3>
+       <p> The final code to make your calculator functional for at least one operation. It should end up looking like this:</p>  
+       <img style="margin-left:35%;width:40%" src="images/ifStatements.png">
+       <p> To allow our program to carry out multiple different operations, we can use t</p>
+    
+    </div>   
       
        
  

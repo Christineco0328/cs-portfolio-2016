@@ -21,6 +21,7 @@ answerButton.addEventListener("click", function(){
         var c= a+b;
 //Whatever answerScreen.innerHTML is equal to is what is going to appear in the answerscreen (our div)        
         answerScreen.innerHTML= c;  
+
     }
 //If the initial "if" statement is false, program will check to see if next else if statement is true. 
 //condition statement for when "-" is the selected operation
