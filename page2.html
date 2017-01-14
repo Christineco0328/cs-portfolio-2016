@@ -156,8 +156,8 @@
 <h2> Get Element by Id</h2>
     <div class="double" id=rcorners1>
         <h3> Step 2: Grabbing information from you HTML</h3>
-        <p> In order to work with the different elements we created in our HTML, we have to "grab" them from our HTML from our javascript page. This can be done through the tag <i> document.GetElementById("*insert Id of Element");</i>  </p>
-        <p> By inserting the unique ID of a certain element, we have grabbed that element onto our javascript. This will allow us to manipulate that specific element through javascript.</p>
+        <p> In order to work with the different elements we created in our HTML, we have to "grab" them from our HTML and refer to it in our javascript page. This can be done through the tag <i> document.GetElementById("*insert Id of Element");</i>  </p>
+        <p> By inserting the unique ID of a certain element, we have grabbed that element into our javascript. This will allow us to manipulate that specific element through javascript.</p>
         <p> Then, for each ID we are going to set them equal to a variable. You will end up with five different variables for five different elements. It should look like this:</p>
         <img style="margin-left:25%" src="images/variables.png">
 
@@ -175,7 +175,7 @@
      
      <div style="width:450px;display:inline-block;margin-left:22%;margin-top:1%;border-radius: 25px;"> 
            <p style="text-align:center"><b>1</b></p>
-           <p style="margin:5%"> First, you will insert the name of the variable attached to your "equal" button so that the program knows which element to attach the add event listener to. Then, this will be followed by the statement ".addEventListener". Be mindful of this capitalization, and if not followed exactly the program will be unable to run. </p>
+           <p style="margin:5%"> First, you will insert the name of the variable attached to your "equal" button so that the program knows which element to attach the add event listener to. Then, this will be followed by the statement ".addEventListener". Be mindful of this capitalization, and if not followed exactly, the program won't be able to run. </p>
        </div>
          
        <div style="width:410px;height;display:inline-block;margin-left:1%;margin-top:1%;border-radius: 25px;">
@@ -187,7 +187,7 @@
     
         <div style="width:60%;display:inline-block;margin-left:22%;margin-top:1%;border-radius: 25px;">
         <p style="text-align:center"><b>3</b></p>
-        <p style="margin:5%"> Then, within the curly brackets, we must tell the program other elements that it has to take into the account of at the press of the equal button. This will involve our variables for our inputs and select elements since our calculator has to be aware of the numbers it has to work with and the operation it is executing. Thus, our function will involve three different variables. Create two different variables, each setting them to an input variable followed by <b>.value</b>. This will indicate to the program that it has to take the value that is within the input box. Finally, we will create a variable for our select element indicating the operation. Once again, take the name of the variable for the select element and follow it with <b>.value</b>. </p>
+        <p style="margin:5%"> Then, within the curly brackets, we must tell the program other elements that it has to take into the account of at the press of the equal button. This will involve our variables for our inputs and select elements since our calculator has to be aware of the numbers it has to work with and the operation it is executing. Thus, our function will involve three different variables. </p> <p>Create two different variables, each setting them to an input variable followed by <b>.value</b>. This will indicate to the program that it has to take the value that is within the input box.</p>  <p> Finally, we will create a variable for our select element indicating the operation. Once again, take the name of the variable for the select element and follow it with <b>.value</b>. </p>
         </div>
         
         
@@ -225,11 +225,13 @@
     
     
     <div class="double" id=rcorners1>
-<h3> Step 5: Else statements</h3>
-       <p> The final code to make your calculator functional for at least one operation. It should end up looking like this:</p>  
+<h3> Step 5: Else if statements</h3>
+       <p> The final code to make your calculator functional for at least one operation should end up looking like this:</p>  
        <img style="margin-left:35%;width:40%" src="images/ifStatements.png">
-       <p> To allow our program to carry out multiple different operations, we can use t</p>
-    
+       <p> To allow our program to carry out multiple different operations, we can use these same steps however plugging in different operations in our condition and within our third variable. In addition, there is also another key difference. Instead of using "if" we are going to create an "else if" statement. Else if statements contain the code block that the program will carry out when the condition in the previous "if" or "else if" statement is proven to be false. The program will check from top to bottom. When the condition to the if or else if statement is false it will move down the list and check if the next one is true or false. It will only proceed in carrying out an operation once it finds a that a condition is true. </p>
+       <p> After following step four once again and implementing the key differences stated, the code for your else if statement should look like this.</p>
+      <img style="margin-left:35%;width:40%" src="images/elseifstatements.png">
+        <p> For every following operation after your initial if statement, you are going to use else if and use this same format. </p>
     </div>   
       
        
@@ -239,7 +241,7 @@
             <ul>
                  <li> <a href="HowtoPage2.html"> 1 </a></li>
                  <li> <a href="page2.html"> 2 </a></li>
-                 <li> <a href=""> 3</a></li>
+                 
             </ul>
 </footer>
     </body>

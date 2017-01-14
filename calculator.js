@@ -25,12 +25,14 @@ answerButton.addEventListener("click", function(){
     }
 //If the initial "if" statement is false, program will check to see if next else if statement is true. 
 //condition statement for when "-" is the selected operation
+ 
     else if (math === "-"){
         var a= parseInt(num1);
         var b= parseInt(num2);
         var c= a-b;
         answerScreen.innerHTML= c; 
     }
+
 //Tells program to multiply the two numbers together when "*" is the selected operation.     
     else if (math === "*") {
         var a= parseInt(num1);

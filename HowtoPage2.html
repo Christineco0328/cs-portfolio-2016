@@ -143,43 +143,52 @@
         <p> When creating an input, in our HTML we will use the tag:  </p>
         <p style="text-align: center; color: red"> <b> &lt;input&gt;</b></p>
         <p> One key difference between input tags and other tags such as headers, tables, or divs, is that it is self closing. This means that it will only need the initial tag that we use to start most tags.
-        For our calculator, we are going to need to create two inputs for the two different factors that we to either add, subtract, multiply, or etc. together.</p>
+        For our calculator, we are going to need to create two inputs for the two different factors that will either add, subtract, multiply, or etc. together.</p>
     </div>
+     
+<h2> Dropdowns</h2>     
     <div id=rcorners1>   
-        <h3> Step 2: Dropdowns </h3>
+        <h3> Step 2: Create Dropdowns </h3>
         <p> To give our calculator the capability of being able to carry out different functions, we can use the select and option tags to list out the different operations the calculator can do. Your tag should look like this:</p>
         <p style="text-align: center; color: red"> <b> &lt;select&gt;&lt;/select&gt;</b></p>
-        <p> Within your select tag you are going to nest each of your option tags where you will put in each of the different operations. Then, we must give each of these options a value according to thier operation</p>
+        <p> Within your select tag you are going to nest each of your option tags where you will put in each of the different operations. Then, we must give each of these options a value according to their operation. To set the option's value you will write "value" within the initial tag and set it equal to an operation inside quotation marks.  </p>
         
         <p>Your option tag should look like this:</p>
-        <p style="text-align: center; color: red"> <b> &lt;option&gt;&lt;/option&gt;</b></p>
+        <p style="text-align: center; color: red"> <b> &lt;option value="+"&gt;&lt;/option&gt;</b></p>
         
             
     </div>
+<h2> Buttons </h2>        
+
     <div id=rcorners1>
-        <h3>Step 3: Buttons </h3>
-        <p> Our calculator will only be able to carry out our function only if we tell it to do so. We can communicate this to our calculator using buttons! Thus, once we click this button, the calculator will know to either add, subtract, multiply or divide the two factors <b>together</b>!</p> 
+        <h3>Step 3: Creating Buttons </h3>
+        <p> Our calculator will only be able to carry out our function if we tell it to do so. We can communicate this to our calculator using buttons! Thus, once we click this button, the calculator will know to either add, subtract, multiply or divide the two factors <b>together</b>!</p> 
         <p> <b> Button Tag </b></p>
         <p> To create a button you will write in your HTML:</p>
         <p style="text-align: center; color: red"> <b> &lt;button&gt;&lt;/button&gt; </b></p>
     </div>
+    <h2> Divs </h2>
     <div id=rcorners1>   
         <h3> Step 4: Divs </h3>
-        <p> We are going to create a designated space that we can use to display our answers. Rather than using a table, as I had used last time (in reference to my first How to Page) we can use divs! Divs will be much simplier to use as they require less tags. Additionally, they will give us more freedom in options for our styling, or CSS. </p>
+        <p> We are going to create a designated space that we can use to display our answers. Rather than using a table, as I had used last time (in reference to my first How to Page) we can use divs! Divs will be much simplier to use as they require less tags. Additionally, they will give us more freedom in styling, or CSS. </p>
         <p><b>Div tag</b></p>
         <p>Your div tag should look like this:</p>
         <p style="text-align: center; color: red"> <b> &lt;div&gt;&lt;/div&gt;</b></p>
             
     </div>
-    <div id=rcorners1>
+    
+    <h2> IDs </h2> 
+    <div id=rcorners1>    
             <h3> Step 5: Giving an Element an ID </h3>
             <p> We are going to give all of the elements we just created an ID so that in our javascript we can specify and refer to these elements when we want to give them a function. By giving these elements an ID we can specifically refer to them individually, which is what we will need for our calculator since each of our elements are going to take on a different operation. </p>
-            <p><b>Creating the input</b></p>
-            <p>Within the first tag of your element, you will set id equal to the name you want to give your element. It should look something like this</p>
+            <p><b>Creating an ID</b></p>
+            <p>Within the first tag of your element, you will set id equal to the name you want to give your element. It should look something like this:</p>
             <p style="text-align: center; color: red">&lt;div <b>id=*insert chosen ID name here*</b> &gt;&lt;/div&gt;</p>
             <p><b> ID naming </b></p>
             <p>When creating an ID, you are going to want to chose a name that suits its intended function. For instance, for the button that we created to be our equal button, you might give it the ID of "equals". When we start doing Javascript, this will make it a lot easier for us to mentally keep track of which element does what. Names that you would want to avoid would be somehting overcomplicated, random, and irrelevant, because once again this will make it hard to keep track of which element you are working with. </p>
     </div>
+    
+        <h2> Script </h2>
     <div id=rcorners1>
         <h3> Step 6: Linking your HTML page to your Javascript page</h3>
         <p> Finally, for our HTML, at the bottom of your page within your "body" tag, you are going to add a script tag. By adding this tag we will be able to link our HTML and javascript pages to each other. Then, within the header tag is where you will actual link to your javascript page. It should look something like this: </p>
@@ -189,7 +198,7 @@
             <ul>
                  <li> <a href="HowtoPage2.html"> 1 </a></li>
                  <li> <a href="page2.html"> 2 </a></li>
-                 <li> <a href=""> 3 </a></li>
+                
             </ul>
         </footer>
     </body>
