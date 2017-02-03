@@ -18,7 +18,7 @@
 
 #navbar li a {
     display: block;
-    font-size: 23px;
+    font-size: 21px;
     font-weight: bold;
     line-height: 50px;
     color: black;
@@ -75,7 +75,20 @@ table td {
 #rcorners1 {
     border-radius: 25px;
     padding: 20px;
+    position: inline-block;
+    
 }
+
+  h1 {
+            background:none;
+            font-size: 35px;
+            text-align: center;
+            margin-left: 15%;
+            margin-right: 5%;
+            margin-top: 25px;
+            text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+            font-family: 'Courgette', cursive;
+        }
 
 
 /*.dropdownele {*/

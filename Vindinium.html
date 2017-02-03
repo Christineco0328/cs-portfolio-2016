@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<title> How to Page 2</title>
+<link rel="stylesheet" href="mainstyle.css" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+    }
+    
+    html {
+        background: url("http://bgfons.com/upload/light_texture2245.jpg") no-repeat center center fixed;
+        background-size: cover;
+    }
+    
+    h2 {
+        font-weight: bold;
+        border: 8px dotted Khaki;
+        padding: 9px;
+        text-align: center;
+        font-size: 30px;
+        margin-left: 15%;
+        margin-right: 5%;
+        font-family: 'Courgette', cursive;
+        text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    h3 {
+        font-family: 'Courgette', cursive;
+        font-weight: bold;
+        margin-left: 10px;
+        text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    p {
+        font-size: 18px;
+        text-align: left;
+        line-height: 150%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    img {
+        background: white;
+        border: 2px solid gray;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    div {
+        background: white;
+        font-size: 20px;
+        Width: 38%;
+        /*margin-left: 22%;*/
+        /*margin-right: 15%;*/
+        margin-top: 10px;
+        display: inline-block;
+        border-style: double;
+        border: 15px double gray;
+        position: absolute;
+        top: 28%;
+    }
+    
+    .float {
+        float: left;
+    }
+    
+    .right {
+        float: right;
+    }
+    
+    .center {
+        margin: auto;
+        border: 15px double gray;
+        padding: 100px;
+    }
+    
+    .doubleborder {
+        border: 10px double gray;
+        border-radius: 25%;
+    }
+    
+    .lessroundborder {
+        border: 10px double gray;
+        border-radius: 25px;
+    }
+    
+    .footer a {
+        bottom: 0px;
+        font-family: 'Courgette', cursive;
+        color: black;
+        text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+        font-size: 30px;
+        background-color: inherit;
+        list-style-type: none;
+        display: inline-block;
+        text-decoration: none;
+    }
+    
+    .break {
+        font-weight: bold;
+        padding: 9px;
+        text-align: center;
+        font-size: 30px;
+        margin-left: 15%;
+        margin-right: 5%;
+        font-family: 'Courgette', cursive;
+        text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+    }
+        
+    
+    footer ul li {
+        background-color: inherit;
+        Width: 95%;
+        text-align: center;
+        margin-left: 50px;
+    }
+</style>
+
+</head>
+
+<body>
+
+    <!-- Navbar Ends Here -->
+    <ul id="navbar">
+        <li> <a href="index.html"> About Me </a></li>
+        <li> <a href="hardware.html"> Hardware </a></li>
+        <li> <a href="HowtoPage.html"> How to Page </a></li>
+        <li> <a href="Calculator.html"> Calculator </a></li>
+        <li> <a href="todolist.html"> To Do list </a></li>
+        <li> <a href="HowtoPage2.html"> How to Page 2.0 </a></li>
+        <li> <a href="Vindinium.html"> Vindinium </a></li>
+        <li> <a href="#"> Big Project </a></li>
+    </ul>
+
+
+    <!-- Navbar Ends Here -->
+
+    <title> Vindinium </title>
+    <h1> Vindinium </h1>
+
+    <h2> How to Play the Game </h2>
+    <img src="images/Vindinium.png" alt="vindinium" style="margin-left:250px; height:500px;margin-right: 10px" class="doubleborder" />
+    <div id="rcorners1">
+        <h3>What is Vindinum?</h3>
+        <p> Vindinium is an artificial intelligence game where four different players code a bot to fight in an arena. Within this arena, bots will compete for the most coins, determined by how many mines you have. Players can then obtain mines through stealing
+            them from their opponents, taking the free mines, or killing their opponents. If you kill your opponent you gain all of their mines. </p>
+        <p>Throughout this process of obtaining mines, all bots will lose health, or "lives". When players attempt to take free mines or the mines of their opponents, they will first have to fight the goblins that protect these mines--taking away their lives.
+            Moreover, in attacking your opponents you will also have lose lives. </p>
+        <p> Thus, players can code their bots to go to "taverns" in order to restore their health.</p>
+        <p> Players with the most coins at the end of 1200 turns will be crowned the winner and earn "elo" based on how many points they won by, determining their ranking on the leaderboard. On the other hand, once a player loses, they can be moved down on
+            the leaderboard also depending on how many points they lost by. </p>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2> Chris-bot's Code </h2>
+    
+    <p class="break"> Global Data </p>
+    <!--<p style="text-align:center; margin-left:265px"> Code that multiple other parts of our code with have to refer to later </p>-->
+    <img src="images/globaldata.png" alt="globaldata" style="margin-left:280px; width: 70%" class="lessroundborder" />
+    <div style="position:static; margin-left:280px" class="lessroundborder">
+        <h3> Determining who your enemies are </h3>
+        <p> Vindinium is set up in such a way that Chris-bot can be any of the four players. Therefore, Chris-bot will not know which bots are its
+        enemies or even which player Chris-bot is playing as. To prevent Chris-bot from attacking, or taking away mines from itself, we must establish which bots are our enemies. 
+        In order accomplish this, we are going to need to create an array. An array is a special type of variable that stores multiple 
+        values in a single variable. We are going to need an array because we have to store the <i>three</i> different enemies we have
+        in a certain variable.
+        <br>
+        </p>
+        <p>Once you have named and created your variable, we will use if statements to check if the bot is NOT Chris-bot. 
+        If this condition is returned back as true, we will "push" that certain variable into the array we created for our enemy bots.
+        However, if the condition is returned back as false, our program establishes that the player is Chris-bot. Your code should follow this 
+        structure:
+        </p>
+        
+        <img src="images/enemyBot.png" style="margin-left:55px"/>
+        
+         <p>
+         Here we see that within the if statement, it will take the id of Chris-bot, using <b> bot.yourBot.id</b> and uses the <b>!=</b> operator to check if Chris-bot's ID does not equal each of the players. Then in the next statement--the codeblock--(if condition is true) it will tell the program to push the bot, using bot.bot#, into the array "enemyBots". 
+         </p>
+    </div>
+    
+    <div style="top:242%; width:30%" class="lessroundborder">
+        <h3> Array syntax </h3>
+        <p> Just like creating a variable, you will first use the keyword "var", give it a name, and set it equal to an opened and closed bracket. Finally, make sure to end it with a semicolon. It should look something like this: </p>
+        <p style="color:red; text-align:center" ><b> var exampleName = [] ;</b></p>
+        
+        <h3> Key Terms: Push</h3>
+        <p> A method used to <b> add </b> an item into an array </p>
+        
+        <h3> Key Terms: Pull</h3>
+        <p> A mehtod used to <b> take </b> an item <b> out </b> of an array</p>
+    </div>
+   
+    <div style="position:static; margin-left:280px" class="lessroundborder">
+        <h3> Determining the Closest Enemy</h3>
+        <p>
+            Later, we are going to want give Chris-bot the ability to attack its enemies to gain more mines. To make Chris-bot more efficient, we can program it to attack the enemy closest to it, but first we have to code an algorithm that finds who is the closest. In order to do this we will be referring back to our enemyBots array, as well as using for loops and if statements.
+        </p>
+        <p>
+            1. Create a variable setting it equal to the array we created storing information on who is our enemy. It should looks like this:
+            
+            <img src="images/closestEnemy1.png" style="margin-left:70px; height:50px"/>
+        </p>
+        <p>
+            2. Next, create a for loop that will run through each element of the enemyBots array. For loops in javascript are used if you want to run the same code over and over again, on a loop. To find the enemy bot that is closest to us we will have to check each bot's location continuously because their coordinates are constantly changing after each turn. In our first statement, we will set "i", representing the starting element, at 0 to ensure that we are looking at all bots starting from the first element of the array. Then, we will let our codeblock run for as long as the length of our enemy bots array.   
+            because we want our for loop to run for all of players or possible enemy bots, we 
+        </p>
+        <p></p>       
+    </div>
+    
+    <div style="top:354%; width:30%" class="lessroundborder">
+        <h3>Array Index:</h3>
+        <p> The different elements within an array are given a number index so that we can refer to it later. The first element starts at 0 and numbers off by 1 for each of the following elements in that array. </p>
+        <h3> For Loop Syntax: </h3>
+        <p> There are four different parts to a for loop:</p>
+        <p> 1. Insert the key word "for" to indicate that you are creating a for loop</p>
+        <p> 2. Statement 1 will indicate at which index the codeblock should start running through the array. </p>
+        <p> 3. Statement 2 is our condition statement. The codeblock will only run if this statement is true.</p>
+        <p> 4. Statement 3 tells our program how often it should loop. An example of this would be every index value or every other index value, which would be expressed using the operator <b> ++ </b> (increment) or <b> -- </b> (decrement).</p>
+        <p> These three statements will be enclosed in parentheses and separated with semicolons. </p>
+        
+    </div>    
+    <br>
+    <p class="break">Telling Chris-bot what to do</p>
+   
+    <!--<img src="images/redbot.png" alt=redbot style="height:90px; margin-left:470px; position:absolute; top:260%" class="doubleborder"/>-->
+    <!--<br>-->
+    <!--<br>-->
+    <img src="images/whattodo.png" alt="whattodo" style="margin-left:280px; width: 70%" class="lessroundborder" />
+    <div style="position:static; margin-left:280px" class="lessroundborder">
+       
+        <h3> Telling Chris-bot what to do</h3>
+        <p> </p>
+    </div>
+    
+    <p class="break"> Telling Chris-bot HOW to do it</p>
+    <img src="images/Howtodoit.png" alt="howtodoit" style="margin-left:280px; width: 70%" class="lessroundborder" />
+    <div style="position:static; margin-left:280px" class="lessroundborder">
+        <h3> Telling Chris-Bot HOW to do it </h3>
+        <p> </p>
+    </div>
+    <h2> Artificial Intelligence </h2>
+
+    <footer class="footer" id="rcorners1">
+        <ul>
+            <li> <a href="Vindinium.html"> 1 </a></li>
+            <li> <a href="#"> 2 </a></li>
+
+        </ul>
+    </footer>
+</body>
+
+</html>
