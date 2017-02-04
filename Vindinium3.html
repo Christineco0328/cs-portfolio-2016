@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<title>Vindinium</title>
+<link rel="stylesheet" href="mainstyle.css" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+    }
+    
+    html {
+        background: url("http://bgfons.com/upload/light_texture2245.jpg") no-repeat center center fixed;
+        background-size: cover;
+    }
+    
+    h2 {
+        font-weight: bold;
+        border: 8px dotted Khaki;
+        padding: 9px;
+        text-align: center;
+        font-size: 30px;
+        margin-left: 15%;
+        margin-right: 5%;
+        font-family: 'Courgette', cursive;
+        text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    h3 {
+        font-family: 'Courgette', cursive;
+        font-weight: bold;
+        margin-left: 10px;
+        text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    p {
+        font-size: 18px;
+        text-align: left;
+        line-height: 150%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    img {
+        background: white;
+        border: 2px solid gray;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    div {
+        background: white;
+        font-size: 20px;
+        Width: 38%;
+        margin-top: 10px;
+        display: inline-block;
+        border-style: double;
+        border: 15px double gray;
+        position: absolute;
+        top: 28%;
+    }
+    
+    pre {
+        background:white;
+        width:81%;
+        margin-left:14%;
+        border:15px double gray;
+        border-radius:25px;
+        
+    }
+    
+    code {
+        font-size: 100%;
+        text-align:center;
+    }
+    
+    .float {
+        float: left;
+    }
+    
+    .right {
+        float: right;
+    }
+    
+    .center {
+        margin: auto;
+        border: 15px double gray;
+        padding: 100px;
+    }
+    
+    .doubleborder {
+        border: 10px double gray;
+        border-radius: 25%;
+    }
+    
+    .lessroundborder {
+        border: 10px double gray;
+        border-radius: 25px;
+    }
+    
+    .footer a {
+        bottom: 0px;
+        font-family: 'Courgette', cursive;
+        color: black;
+        text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+        font-size: 30px;
+        background-color: inherit;
+        list-style-type: none;
+        display: inline-block;
+        text-decoration: none;
+    }
+    
+    .break {
+        font-weight: bold;
+        padding: 9px;
+        text-align: center;
+        font-size: 30px;
+        margin-left: 15%;
+        margin-right: 5%;
+        font-family: 'Courgette', cursive;
+        text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+  
+</style>
+
+</head>
+
+<body>
+
+    <!-- Navbar Ends Here -->
+    <ul id="navbar">
+        <li> <a href="index.html"> About Me </a></li>
+        <li> <a href="hardware.html"> Hardware </a></li>
+        <li> <a href="HowtoPage.html"> How to Page </a></li>
+        <li> <a href="Calculator.html"> Calculator </a></li>
+        <li> <a href="todolist.html"> To Do list </a></li>
+        <li> <a href="HowtoPage2.html"> How to Page 2.0 </a></li>
+        <li> <a href="Vindinium.html"> Vindinium </a></li>
+        <li> <a href="#"> Big Project </a></li>
+    </ul>
+
+
+    <!-- Navbar Ends Here -->
+    <h1> Vindinium </h1>
+    
+    <h2> Chris-bot's Code</h2>
+     <p class="break">Telling Chris-bot what to do</p>
+    
+    <!--<img src="images/redbot.png" alt=redbot style="height:90px; margin-left:470px; position:absolute; top:260%" class="doubleborder"/>-->
+    <!--<br>-->
+    <!--<br>-->
+    <img src="images/whattodo.png" alt="whattodo" style="margin-left:280px; width: 70%" class="lessroundborder" />
+    <div style="position:static; margin-left:280px" class="lessroundborder">
+
+        <h3> Go to Taverns</h3>
+        <p> Since we want our bot to be healthy, we need to make it the highest priority for Chris-bot to go to taverns. Using an <i> if statement</i> at the top of the page will create this priority because it is the first statement that the program will check to see if its true or false. </p>
+        <p> Then, for the condition, I want Chris-bot to go to taverns only when it has low health. Therefore, in the condtion I stated, Chris-bot's health (using "bot.yourBot.life") is less than (using the operator "<").</p> 
+        <p> Finally, for the codeblock, we have to tell Chris-bot that it is going to go to taverns when the condition is true. To do this, we can simply set task equal to the string <i>taverns</i>. Now, if Chris-bot's health is less than 60, it will go to taverns, and if not, it will move onto the next statement.</p>
+        <p> Your if statement should look like this:
+        <img src="images/taverns.png" style="width:270px; margin-left:120px">
+        </p>
+        
+    </div>
+    <div style="position:static; margin-left:280px" class="lessroundborder">
+        <h3> Attack, Chris-bot! ATTACK!</h3>
+        <p> Attacking will take away Chris-bot's life, so we don't want Chris-bot to fight when its health is low. Thus, attacking will be our second priority to ensure that it is healthy before it fights. Therefore, we will use an <i>else if</i> statement instead. </p>
+        <p> To make Chris-bot a tactical player, I wanted to create a very specific condition that tells Chris-bot to attack when an enemy bot is "too close for comfort" or when an enemy bot's life is less than mine so that I have a better chance at winning. </p>
+        <p style="margin-left:60px">So for the first part of my function, I found the distance between my position and the position of my closestEnemy using bot.findDistance and then will make my program check if this distance is less than or equal to 2 units--which I am considering too close for comfort. I will do this using the operator "<=".</p>    
+        <p style="margin-left:60px"> Then, I also want to check if my life is greater than the life of my enemy. I can do this by stating <b> bot.yourBot.life > enemyBot.life</b>.</p>
+        <p> To separate these two different conditions I used the operator <b>"||"</b> meaning <i>"either or"</i>. This will give more opportunities for Chris-bot to attack. If I were to set this condition to if both of them were true, the condition would be too specific and give Chris-bot less opportunities to attack. </p>
+        <p> Then finally, we have to set task equal to the string <i> attack </i>, which we will refer to later.</p>
+        <p> The final statement should look like this:
+        <img src="images/attack.png" style="width:470px; margin-left:20px"> 
+        </p>
+        
+    </div>
+    <div style="position:static; margin-left:280px" class="lessroundborder">
+        <h3> Go to Closest Mine</h3>
+        <p> If both conditions of our if and else if statements are <i> false </i>, we want Chris-bot's default action to be to go and collect the mines, which will earn Chris-bot more coins to win. Because collecting the closest mine is our default action, we are going to use an else statement, which is the statement used when the prior statements to it are false. This also means that we do not a condition because it already knows that the codeblock will run when all other conditions are false. </p>
+        <p> For our codeblock, all we have to do is set our task to equal to the string <i>closestMine</i>, which we will refer to later.</p>
+        <p> This statement should look like this:
+        <img src="images/closestmine.png" style="width:270px; margin-left:120px"> 
+        </p>
+        
+    </div>
+    
+    
+     <footer class="footer" id="rcorners1">
+        <ul>
+            <li> <a href="Vindinium.html"> 1 </a></li>
+            <li> <a href="vindinium2.html"> 2 </a></li>
+            <li> <a href="Vindinium3.html"> 3 </a></li>
+            <li> <a href="Vindinium4.html"> 4 </a></li>
+             <li> <a href="Vindinium5.html"> 5 </a></li>
+             <li> <a href="Vindinium6.html"> 6 </a></li>
+
+        </ul>
+    </footer>

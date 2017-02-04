@@ -1,7 +1,7 @@
 #navbar {
-    margin-top:-21px;
+    margin-top: -21px;
     list-style-type: none;
-    padding:0%;
+    padding: 0%;
     width: 10%;
     background-color: white;
     position: fixed;
@@ -11,10 +11,8 @@
     border: 8px dotted Khaki;
     text-align: center;
     border-radius: 25px;
-    text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
-    
-    
-  }
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+}
 
 #navbar li a {
     display: block;
@@ -25,21 +23,20 @@
     padding: 11px 2px;
     text-decoration: none;
     border-radius: 25px;
-    
 }
 
 .active {
     background-color: #80bfff;
     color: white;
-    text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
 }
 
 #navbar li a:hover:not(.active) {
     background-color: #80bfff;
     color: white;
     font-size: 28px;
-    border-radius: 25px; 
-    text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+    border-radius: 25px;
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
 }
 
 #pictures {
@@ -76,42 +73,87 @@ table td {
     border-radius: 25px;
     padding: 20px;
     position: inline-block;
-    
 }
 
-  h1 {
-            background:none;
-            font-size: 35px;
-            text-align: center;
-            margin-left: 15%;
-            margin-right: 5%;
-            margin-top: 25px;
-            text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
-            font-family: 'Courgette', cursive;
-        }
+h1 {
+    background: none;
+    font-size: 35px;
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 5%;
+    margin-top: 25px;
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+    font-family: 'Courgette', cursive;
+}
+
+footer ul li {
+    background-color: inherit;
+    Width: 5%;
+    text-align: center;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+footer {
+    margin-left: 400px;
+}
 
 
 /*.dropdownele {*/
+
+
 /*    background-color: white;*/
+
+
 /*    color: black;*/
+
+
 /*    text-shadow: 4px 4px 3px rgba(0,0,0,0.1);*/
+
+
 /*}*/
+
 
 /*.dropdown {*/
+
+
 /*    position: relative;*/
+
+
 /*}*/
+
 
 /*.dropdown-content {*/
+
+
 /*    position:absolute;*/
+
+
 /*    background-color:white;*/
+
+
 /*    color:gray;*/
+
+
 /*    text-shadow: 4px 4px 3px rgba(0,0,0,0.1);*/
+
+
 /*}*/
 
+
 /*.dropdown-content a:hover {*/
+
+
 /*    text-decoration: none;*/
+
+
 /*    background-color: #80bfff;*/
+
+
 /*    color: white;*/
+
+
 /*    text-shadow: 4px 4px 3px rgba(0,0,0,0.1);*/
-    
+
+
 /*}*/

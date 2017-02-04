@@ -1,0 +1,305 @@
+ <!DOCTYPE html>
+<html>
+<title>Vindinium</title>
+<link rel="stylesheet" href="mainstyle.css" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+    }
+    
+    html {
+        background: url("http://bgfons.com/upload/light_texture2245.jpg") no-repeat center center fixed;
+        background-size: cover;
+    }
+    
+    h2 {
+        font-weight: bold;
+        border: 8px dotted Khaki;
+        padding: 9px;
+        text-align: center;
+        font-size: 30px;
+        margin-left: 15%;
+        margin-right: 5%;
+        font-family: 'Courgette', cursive;
+        text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    h3 {
+        font-family: 'Courgette', cursive;
+        font-weight: bold;
+        margin-left: 10px;
+        text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    p {
+        font-size: 18px;
+        text-align: left;
+        line-height: 150%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    img {
+        background: white;
+        border: 2px solid gray;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    div {
+        background: white;
+        font-size: 20px;
+        Width: 38%;
+        margin-top: 10px;
+        display: inline-block;
+        border-style: double;
+        border: 15px double gray;
+        position: absolute;
+        top: 28%;
+    }
+    
+    pre {
+        background:white;
+        width:81%;
+        margin-left:14%;
+        border:15px double gray;
+        border-radius:25px;
+        
+    }
+    
+    code {
+        font-size: 100%;
+        text-align:center;
+    }
+    
+    .float {
+        float: left;
+    }
+    
+    .right {
+        float: right;
+    }
+    
+    .center {
+        margin: auto;
+        border: 15px double gray;
+        padding: 100px;
+    }
+    
+    .doubleborder {
+        border: 10px double gray;
+        border-radius: 25%;
+    }
+    
+    .lessroundborder {
+        border: 10px double gray;
+        border-radius: 25px;
+    }
+    
+    .footer a {
+        bottom: 0px;
+        font-family: 'Courgette', cursive;
+        color: black;
+        text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+        font-size: 30px;
+        background-color: inherit;
+        list-style-type: none;
+        display: inline-block;
+        text-decoration: none;
+    }
+    
+    .break {
+        font-weight: bold;
+        padding: 9px;
+        text-align: center;
+        font-size: 30px;
+        margin-left: 15%;
+        margin-right: 5%;
+        font-family: 'Courgette', cursive;
+        text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+  
+</style>
+
+</head>
+
+<body>
+
+    <!-- Navbar Ends Here -->
+    <ul id="navbar">
+        <li> <a href="index.html"> About Me </a></li>
+        <li> <a href="hardware.html"> Hardware </a></li>
+        <li> <a href="HowtoPage.html"> How to Page </a></li>
+        <li> <a href="Calculator.html"> Calculator </a></li>
+        <li> <a href="todolist.html"> To Do list </a></li>
+        <li> <a href="HowtoPage2.html"> How to Page 2.0 </a></li>
+        <li> <a href="Vindinium.html"> Vindinium </a></li>
+        <li> <a href="#"> Big Project </a></li>
+    </ul>
+
+
+    <!-- Navbar Ends Here -->
+    <h1> Vindinium </h1>
+    <h2>Chris-Bot's Guts! (Entire Code)</h2>
+    <p style="text-align:center; margin-left:245px"> Use this to reference sequencing and format the different parts of Chris-bots code!</p>
+  
+        <pre>
+            <code>
+                var Bot = require('bot');
+var PF = require('pathfinding');
+// var bot = new Bot('iwuas70p', 'training', 'http://vindinium.org'); //Put your bot's code here and change training to Arena when you want to fight others.
+var bot = new Bot('00da7j0p', 'arena', 'http://52.39.33.197:9000'); //Put your bot's code here and change training to Arena when you want to fight others.
+var goDir;
+var Promise = require('bluebird');
+Bot.prototype.botBrain = function() {
+    return new Promise(function(resolve, reject) {
+        _this = bot;
+        //////* Write your bot below Here *//////
+        //////* Set `myDir` in the direction you want to go and then bot.goDir is set to myDir at the bottom *////////
+
+        /*                                      *
+         * This Code is global data!            *
+         *                                      */
+
+        // Set myDir to what you want and it will set bot.goDir to that direction at the end.  Unless it is "none"
+        var myDir;
+        var myPos = [bot.yourBot.pos.x, bot.yourBot.pos.y];
+
+        var enemyBots = [];
+        if (bot.yourBot.id != 1) enemyBots.push(bot.bot1);
+        if (bot.yourBot.id != 2) enemyBots.push(bot.bot2);
+        if (bot.yourBot.id != 3) enemyBots.push(bot.bot3);
+        if (bot.yourBot.id != 4) enemyBots.push(bot.bot4);
+
+        /*This part of my code looks through enemy bots array and finds the enemy that is closest to it
+        depending on their coordinates (found through bot.findDistance). */
+       
+        var closestEnemy = enemyBots[0];
+        for (i = 0; i < enemyBots.length; i++) {
+         
+            if (bot.findDistance(myPos, closestEnemy.posArray) 
+            > bot.findDistance(myPos, enemyBots[i].posArray)) {
+                
+                closestEnemy = enemyBots[i];
+            }
+        }
+        /* Array that concatenates all of your enemy's mines together, this variable will also be refered 
+        to later so that the bot knows which mine it should go to */
+     
+        var availableMines = [];
+        availableMines = availableMines.concat(enemyBots[0].mines);
+        availableMines = availableMines.concat(enemyBots[1].mines);
+        availableMines = availableMines.concat(enemyBots[2].mines);
+
+        // for loop that pushes or includes all of the available free mines together with the enemy mines
+        for (i = 0; i < bot.freeMines.length; i++) {
+            availableMines.push(bot.freeMines[i]);
+        }
+
+
+
+        /*                                      *
+         * This Code Decides WHAT to do         *
+         *                                      */
+        var task;
+
+        // this statements determines my bot to go to taverns if my bot's life is less that 60
+        if (bot.yourBot.life < 60) {
+            task = "taverns"
+        }
+
+        // This statement tells my bot to attack if an enemy is less or equal to 2 units away from me OR if an enemyBots's life is less than mine 
+        else if (bot.findDistance(myPos, closestEnemy.posArray) <= 2 
+                 || bot.yourBot.life > enemyBots.life) {
+            task = "attack";
+
+        }
+
+        // If the above statements are false, my bot will go the the closest mine
+        else {
+            task = "closestMine";
+        }
+
+        /*                                      *
+         * This Code Determines HOW to do it    *
+         *                                      */
+
+        //runs through this code if task is equal to taverns
+        // looks through all taverns and calculates the tavern that is closest to my position. 
+        if (task === "taverns") {
+            var closestTavern = bot.taverns[0];
+            for (i = 0; i < bot.taverns.length; i++) {
+                if (bot.findDistance(myPos, closestTavern) > bot.findDistance(myPos, bot.taverns[i])) {
+                    closestTavern = bot.taverns[i];
+                }
+            }
+            // sets my dir on the path to the tavern that is closest to it
+            console.log("Going to Tavern");
+            myDir = bot.findPath(myPos, closestTavern);
+        }
+
+        // This Code finds the nearest available mine in for loop and sets myDir toward that direction
+        if (task === "closestMine") {
+            var closestMine = bot.freeMines[0];
+            for (i = 0; i < availableMines.length; i++) {
+                if (bot.findDistance(myPos, closestMine) > bot.findDistance(myPos, availableMines[i])) {
+                    closestMine = availableMines[i];
+                }
+            }
+
+
+            console.log("Claiming closest mine!");
+            myDir = bot.findPath(myPos, closestMine);
+        }
+        /* This Code finds the closest enemy (determined in global data) to attack and sets myDir toward their direction */
+
+        if (task === "attack") {
+
+            console.log("Kill! Kill! Kill!");
+            myDir = bot.findPath(myPos, closestEnemy.posArray);
+
+        }
+
+
+        /*                                                                                                                              *
+         * This Code Sets your direction based on myDir.  If you are trying to go to a place that you can't reach, you move randomly.   *
+         * Otherwise you move in the direction set by your code.  Feel free to change this code if you want.                            */
+        if (myDir === "none") {
+            console.log("Going Random!");
+            var rand = Math.floor(Math.random() * 4);
+            var dirs = ["north", "south", "east", "west"];
+            bot.goDir = dirs[rand];
+        }
+        else {
+            bot.goDir = myDir;
+        }
+
+
+
+        ///////////* DON'T REMOVE ANTYTHING BELOW THIS LINE *//////////////
+        resolve();
+    });
+};
+bot.runGame();
+
+            </code>
+        </pre>
+    
+  
+    
+    
+     <footer class="footer" id="rcorners1">
+        <ul>
+            <li> <a href="Vindinium.html"> 1 </a></li>
+            <li> <a href="vindinium2.html"> 2 </a></li>
+            <li> <a href="Vindinium3.html"> 3 </a></li>
+            <li> <a href="Vindinium4.html"> 4 </a></li>
+             <li> <a href="Vindinium5.html"> 5 </a></li>
+             <li> <a href="Vindinium6.html"> 6 </a></li>
+             
+
+        </ul>
+    </footer>
+    
