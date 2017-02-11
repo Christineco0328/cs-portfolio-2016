@@ -43,14 +43,15 @@
     img {
         background: white;
         border: 2px solid gray;
-        margin-left: 10px;
-        margin-right: 10px;
+        display:block;
+        margin:auto;
+        margin-bottom:3%;
     }
     
     div {
         background: white;
         font-size: 20px;
-        Width: 38%;
+        Width: 70%;
         margin-top: 10px;
         display: inline-block;
         border-style: double;
@@ -146,9 +147,7 @@
     <h2> Chris-bot's Code</h2>
      <p class="break">Telling Chris-bot what to do</p>
     
-    <!--<img src="images/redbot.png" alt=redbot style="height:90px; margin-left:470px; position:absolute; top:260%" class="doubleborder"/>-->
-    <!--<br>-->
-    <!--<br>-->
+  
     <img src="images/whattodo.png" alt="whattodo" style="margin-left:280px; width: 70%" class="lessroundborder" />
     <div style="position:static; margin-left:280px" class="lessroundborder">
 
@@ -157,8 +156,9 @@
         <p> Then, for the condition, I want Chris-bot to go to taverns only when it has low health. Therefore, in the condtion I stated, Chris-bot's health (using "bot.yourBot.life") is less than (using the operator "<").</p> 
         <p> Finally, for the codeblock, we have to tell Chris-bot that it is going to go to taverns when the condition is true. To do this, we can simply set task equal to the string <i>taverns</i>. Now, if Chris-bot's health is less than 60, it will go to taverns, and if not, it will move onto the next statement.</p>
         <p> Your if statement should look like this:
-        <img src="images/taverns.png" style="width:270px; margin-left:120px">
         </p>
+       
+        <img src="images/taverns.png" style="width:270px;">
         
     </div>
     <div style="position:static; margin-left:280px" class="lessroundborder">
@@ -170,8 +170,9 @@
         <p> To separate these two different conditions I used the operator <b>"||"</b> meaning <i>"either or"</i>. This will give more opportunities for Chris-bot to attack. If I were to set this condition to if both of them were true, the condition would be too specific and give Chris-bot less opportunities to attack. </p>
         <p> Then finally, we have to set task equal to the string <i> attack </i>, which we will refer to later.</p>
         <p> The final statement should look like this:
-        <img src="images/attack.png" style="width:470px; margin-left:20px"> 
-        </p>
+         </p>
+       
+        <img src="images/attack.png" style="width:470px; "> 
         
     </div>
     <div style="position:static; margin-left:280px" class="lessroundborder">
@@ -179,8 +180,9 @@
         <p> If both conditions of our if and else if statements are <i> false </i>, we want Chris-bot's default action to be to go and collect the mines, which will earn Chris-bot more coins to win. Because collecting the closest mine is our default action, we are going to use an else statement, which is the statement used when the prior statements to it are false. This also means that we do not a condition because it already knows that the codeblock will run when all other conditions are false. </p>
         <p> For our codeblock, all we have to do is set our task to equal to the string <i>closestMine</i>, which we will refer to later.</p>
         <p> This statement should look like this:
-        <img src="images/closestmine.png" style="width:270px; margin-left:120px"> 
         </p>
+       
+        <img src="images/closestmine.png" style="width:270px; "> 
         
     </div>
     
