@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> </title>
+    <link rel="stylesheet" href="mainstyle.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        html {
+            background: url("http://bgfons.com/upload/light_texture2245.jpg") no-repeat center center fixed;
+            background-size: cover;
+        }
+        
+        h1 {
+            background: none;
+            text-align: center;
+            margin-left: 15%;
+            margin-right: 5%;
+            font-family: 'Courgette', cursive;
+            color: black;
+            text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            font-weight: bold;
+            border: 8px dotted Khaki;
+            padding: 9px;
+            text-align: center;
+            font-size: 30px;
+            margin-left: 15%;
+            margin-right: 5%;
+            font-family: 'Courgette', cursive;
+        }
+        
+        h3 {
+            font-family: 'Courgette', cursive;
+            font-weight: bold;
+            text-align: left;
+            padding: 10px;
+        }
+        
+        h4 {
+            text-align:center;
+            font-family: 'Courgette', cursive;
+            font-weight:bold;
+        }
+        
+        p {
+            font-size: 18px;
+            text-align: center;
+            line-height: 150%;
+            margin-left: 14%;
+            margin-right: 5%;
+        }
+        
+        img {
+            background: white;
+            border: 2px solid gray;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        div {
+            background: white;
+            font-size: 20px;
+            Width: 70%;
+            margin-left: 20%;
+            margin-top: 10px;
+            display: inline-block;
+            border: 15px double gray;
+            border-radius: 25px;
+        }
+        
+        .float {
+            float: left;
+        }
+        
+        .right {
+            float: right;
+        }
+        
+        .center {
+            margin: auto;
+            border: 15px double gray;
+            padding: 100px;
+        }
+        
+        .doubleborder {
+            border: 5px double gray;
+        }
+        
+        .footer a {
+            bottom: 0px;
+            font-family: 'Courgette', cursive;
+            color: black;
+            text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+            font-size: 30px;
+            background-color: inherit;
+            list-style-type: none;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .inline {
+            display:inline-block;
+        }
+        
+        img {
+            border-radius:25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="navbar">
+        <li> <a href="index.html"> About Me </a></li>
+        <li> <a href="hardware.html"> Hardware </a></li>
+        <li> <a href="HowtoPage.html"> How to Page 1.0</a></li>
+        <li> <a href="Calculator.html"> Calculator </a></li>
+        <li> <a href="todolist.html"> To Do list </a></li>
+        <li> <a href="HowtoPage2.html"> How to Page 2.0 </a></li>
+        <li> <a href="Vindinium.html"> Vindinium </a></li>
+        <li> <a href="https://christineco0328.github.io/clickableKeyboard/clickableKeyboard.html"> Big Project </a></li>
+        <li> <a href="HowtoPage3.html"> How to Page 3.0 </a></li>
+
+
+    </ul>
+
+
+    <h1> How to Create Clickable Keyboard </h1>
+    <p> Here I will show you how use Javascript, HTML, and CSS to create a Clickable Keyboard!</p>
+    <center>
+    <img src="images/KeyboardIMG.png" style="border:15px double gray;width:60%;margin-left:8%">
+   </center>
+    <h2> HTML for your Keyboard</h2>
+
+        <div>
+            <h3> Step 1: Create your Keys (Divs! Divs! Divs!) </h3>
+            <p> In order to create a piano, we need to have keys to press. Therefore, in our HTML we can use divs to represent the keys on the keyboard. You will need to create a new div for each key you make, thus I suggest that you at least create 8 divs
+                to complete a full octave on the piano. </p>
+
+        </div>
+        <div>
+            <h3> Step 2: Give each Key an ID</h3>
+            <img src="images/KeyBoardDivs.png" alt="keyboard" class="right" style="height:250px;margin-bottom:60px" />
+       
+            <p> In our javascript we will need to refer each key individually to assign specific sounds to each key according to their place on the keyboard. Thus, to make each key unique, we can give each div a different ID.</p>
+            <p> As mentioned in previous <i> How to Pages </i>, adding an ID will look like this:</p>
+            <p style="text-align: center; color: red"> &lt;div <b> id = "C" </b>&gt; &lt;/div&gt;</p>
+           </div>
+        <h2> CSS -- Decorate your Keyboard! </h2>    
+        <div> <p>This is where the CSS will show up </p></div>
+        <h2> Javascript for your Keyboard</h2>
+        <div>
+            <h3> Step 1: Get Element By Id</h3>
+            <p> Through javascript, we will attach the different pitches found in the scale to each of the divs (keys). In order for us to interact with and manipulate the divs, we need to create a connection between the divs in our HTML and our javascript. We can achieve this using the method <b> getElementByID()</b>. </p>
+            <p> This method takes the element in the HTML based on its ID and brings over its information onto the Javascript so that we can manipulate its data. Therefore, to bring over the data associated with the keys in our HTML, we will insert the ID of each of our divs into the getElementByID method.</p>
+            <h4> Variables </h4>
+                <p> Throughout our javascript we are going to need to refer to each of the keys multiple times. To prevent us from having to write "getElementByID()" each time, we can simplify this information by equating it to a single variable. </p>
+                <p> Your javascript should now look similar to this:</p>
+                <center>
+                <img src="images/KeyboardVar.png" alt="keyboard"  style="height:150px;margin-bottom:40px">
+                </center>
+        </div>
+        <div>
+            <h3> Step 2: Add Event Listeners</h3>
+            <p> Next, we want the program to be able to play a certain note when a key on our physical keyboard is pressed. In order for this to happen, we need our program has to know when the key is being pressed. Thus, we can use an Add Event Listener to enable our program to <i>listen</i> for when a key is pressed. </p>
+            <p> First, we need to tell the program which element it should be listening to. The program needs to be listening whenever the user is on the webpage. The element <i>document</i> refers to the entire HTML document. Thus, we can attach the add event listener to the page as a whole so that the add event listener is listening whenever the document is being used. Your code should now look like this:</p>
+            <p style="color:red"> <b> document.addEventListener</b></p>
+            <p> Getting more specific, we now need to tell the program WHAT it needs to listen for. Using the event <b>"keydown"</b>, the program will listen for when a key on the physical keyboard is pressed. </p>
+            <p style="color:red"> document.addEventListener<b>("keydown",      )</b></p>
+            <p> Now that it knows what it has to listen for, the program now needs to know what it has to DO when it "hears" the <i>keydown</i> event. Thus, we will tell it to run function(e).</p> 
+        </div>
+        <div>
+            <h3> Step 3: If statements</h3>
+            <p></p>
+        </div>
+        
+</body>
+
+</html>
