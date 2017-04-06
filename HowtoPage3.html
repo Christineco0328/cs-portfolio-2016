@@ -73,6 +73,7 @@
             display: inline-block;
             border: 15px double gray;
             border-radius: 25px;
+            margin-bottom: 50px
         }
         
         .float {
@@ -150,10 +151,9 @@
        
             <p> In our javascript we will need to refer each key individually to assign specific sounds to each key according to their place on the keyboard. Thus, to make each key unique, we can give each div a different ID.</p>
             <p> As mentioned in previous <i> How to Pages </i>, adding an ID will look like this:</p>
-            <p style="text-align: center; color: red"> &lt;div <b> id = "C" </b>&gt; &lt;/div&gt;</p>
+            <p style="text-align: center; color: red;font-size:33px"> &lt;div <b> id = "C" </b>&gt; &lt;/div&gt;</p>
            </div>
-        <h2> CSS -- Decorate your Keyboard! </h2>    
-        <div> <p>This is where the CSS will show up </p></div>
+    
         <h2> Javascript for your Keyboard</h2>
         <div>
             <h3> Step 1: Get Element By Id</h3>
@@ -166,20 +166,47 @@
                 <img src="images/KeyboardVar.png" alt="keyboard"  style="height:150px;margin-bottom:40px">
                 </center>
         </div>
+        
         <div>
             <h3> Step 2: Add Event Listeners</h3>
             <p> Next, we want the program to be able to play a certain note when a key on our physical keyboard is pressed. In order for this to happen, we need our program has to know when the key is being pressed. Thus, we can use an Add Event Listener to enable our program to <i>listen</i> for when a key is pressed. </p>
             <p> First, we need to tell the program which element it should be listening to. The program needs to be listening whenever the user is on the webpage. The element <i>document</i> refers to the entire HTML document. Thus, we can attach the add event listener to the page as a whole so that the add event listener is listening whenever the document is being used. Your code should now look like this:</p>
-            <p style="color:red"> <b> document.addEventListener</b></p>
-            <p> Getting more specific, we now need to tell the program WHAT it needs to listen for. Using the event <b>"keydown"</b>, the program will listen for when a key on the physical keyboard is pressed. </p>
-            <p style="color:red"> document.addEventListener<b>("keydown",      )</b></p>
-            <p> Now that it knows what it has to listen for, the program now needs to know what it has to DO when it "hears" the <i>keydown</i> event. Thus, we will tell it to run function(e).</p> 
-        </div>
-        <div>
-            <h3> Step 3: If statements</h3>
-            <p></p>
+            <p style="color:red;font-size:33px"> <b> document.addEventListener</b></p>
+            <p> Getting more specific, we now need to tell the program WHAT it needs to listen for. Using the event <b>"keydown"</b>, the program will listen for when a key on the physical keyboard is pressed.</p>
+            <p style="color:red;font-size:33px"> document.addEventListener<b>("keydown",      )</b></p>
+            <p> Once this add event listener hears the event, "keydown", it will record all the information about what happened when the key was pressed, including which keys were pressed. Any available information about the event will then be stored into an argument called "<b>e</b>".</p> 
+            <p> Now that it knows what it has to listen for, the program now needs to know what it has to DO when it "hears" the <i>keydown</i> event. We will do this using a callback function--a function that is passed onto another function. This callback function, which we will simply call "function", will take in "e," which holds all the information about the event, as stated. This data, or "e" will later be refered to in our <i>if statement</i>. The format for your add event listener and callback function should now look like this. </p> 
+            <p style="color:red;font-size:33px"> document.addEventListener("keydown",<b>function(e)</b>)</p>
+
         </div>
         
+        <div>
+            <h3> Step 3: If statements</h3>
+            <p>For each key, we want a different sound to be played. Thus, for each div, we can use if statements to play a certain sound <i>if </i> a certain key is played--creating an association between the key on the scale to the div. To write our if statement, we will first use the keyword, <i>if</i>. Then, we need to create a condition statement that will check to see if the key pressed on the computer keyboard is a specific key. In order for the program to find this key, it has to look through <b><i>e</i></b>. However, <i>e</i> contains <i>all</i> the information associated with the event, but we only need to know which key is being pressed. Thus, to make the output more specific, we can use dot notation to tell the program to only look at the "keycode" of the key.</p> 
+            <p style="font-size:15px"><i>(Each key on the keyboard is associated with a certain keycode. Find out the keycode of any key <a href="http://keycode.info/"> Here</a> )</i></p>
+            <p> Then, we also have to check to see if this information is <i>equal</i> to the keycode of the key that we want the sound to be associated. This can be done using three equal signs followed by the keycode of the desired key. Your if statement and condition should now look like this:</p>
+                        <p style="color:red;font-size:33px"><b>if (e.keyCode === 65)</b></p>
+
+        </div>
+        
+        <div>
+            <h3>Step 4: The Codeblock for your If Statement</h3>
+            <p> Finally, we need to tell the program what to do if our condition is <i>true</i>. For the purposes of creating a keyboard, we want a certain note on the keyboard to play once a key is pressed. Because we have multiple events that trigger the same noise within this keyboard, we can put the audio files for each pitch on the scale into new variables within our global data. By establishing these variables in our global data, we give our entire code access to these files to be applied to multiple functions. The variables containing your audio files should look something like this:</p>
+        <center>
+         <img src="images/audiofileVAR.png">   
+        </center>
+        <p>    
+            Refering back to our code block, we would need to use a method that would play the audio file once the associated key on the
+            computer keyboard is pressed. This is the exact purpose of the <b><i>play()</i></b> method. The play method is used to start play either a video, or in our case, an audio file. We can then use dot notation to specify to our program to apply the "play()" method to the audio file contained in the variables we established earlier. In sum, if the <i>if statement</i> is true, the desired audiofile will be played using the "play()" method. Your if statement and code block combined should follow this format:</p>
+                               <p style="color:red;font-size:25px">if (e.keyCode === *insert keycode of desired key on keyboard*)<br> {*insert name of audio file variable*.play();}</p>
+        
+        <p>Here is an example of what your code might look like:
+            </p>
+        <center>
+            <img src="images/KEY.png" style="width:380px">
+        </center>    
+        <p> After completeing this process for one of your keys, you are going to need to follow the same process and create at least seven other if statements for the other keys. The program will look through each if statement until it finds an if statement that is true. By using if statements, we give the program multiple options for different outcomes according to the input, which works perfectly for out keyboard because we need different notes to play (outcome) when we press different keys (input). </p>
+        </div>
 </body>
 
 </html>
